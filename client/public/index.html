@@ -3,30 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/style/index.css">
-    <title>Home | Tech Biz</title>
+    <link rel="stylesheet" href="../src/style/index.css"> <!--CSS Stylesheet-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet"> <!--Google Fonts-->
+    <title>Tech Biz | Software Development & Digital Transformation Agency</title>
 </head>
 <body>
     <header>
         <nav>
             <h1>Tech Biz</h1>
             <ul class="main-menu">
-                <li>About</li>
-                <li id="servicesLink">Services
-                    <ul id="servicesDropdown" class="services-dropdown">
-                        <li>Web Dev</li>
-                            <ul>
-                                <li>Static</li>
-                                <li>Dynamic</li>
-                            </ul>
-                    </ul>
-                </li>
-                <li>Contact us</li>
+                <a href="#"><li class="menu-items">About</li></a>
+                <a href="#"><li class="menu-items" id="servicesLink">Services</li></a>
+                    <div id="servicesDropdown" class="services-dropdown">
+                        <div class="dropdown-design">
+                            <section>
+                                <a href="#">Website Development</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>Static Websites</li></a>
+                                    <a href="#"><li>Dynamic Websites</li></a>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#">Basic App Development</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>Productivity Tools</li></a>
+                                    <a href="#"><li>Educational Apps</li></a>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#">Data Management</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>Database Setup and Maintenance</li></a>
+                                    <a href="#"><li>Simple Analytics Tools</li></a>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#">Digital Content Management</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>CMS-based Websites</li></a>
+                                    <a href="#"><li>Custom CMS Solutions</li></a>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#">Tech Consultation</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>Technology Audits</li></a>
+                                    <a href="#"><li>Basic Digital Strategy</li></a>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                <a href="#"><li class="menu-items">Contact us</li></a>
             </ul>
         </nav>
     </header>
-    
-    <main></main>
+    <main>
+        <section class="hero">
+            <h1>Digital Transformation for Startups</h1>
+        </section>
+        <section class="introduction">
+            <h2>Who we are</h2>
+            <p>Meet the team...</p>
+        </section>
+    </main>
     <footer></footer>
     <script src="../src/index.js"></script>
 </body>

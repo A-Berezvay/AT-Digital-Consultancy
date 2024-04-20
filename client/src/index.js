@@ -1,17 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var servicesLink = document.getElementById('servicesLink');
-    var servicesDropdown = document.getElementById('servicesDropdown');
+const serviceBtn = document.getElementById('servicesLink');
+const dropdownMenu = document.getElementById('servicesDropdown');
 
-    // Show the dropdown when the Services link is hovered
-    servicesLink.addEventListener('mouseenter', function() {
-        servicesDropdown.style.display = 'block';
-    });
+function showDropdown() {
+    dropdownMenu.style.display = 'block';
+}
 
-    // Hide the dropdown when the mouse leaves the Services dropdown area
-    servicesDropdown.addEventListener('mouseleave', function() {
-        servicesDropdown.style.display = 'none';
-    });
+function hideDropdown() {
+    dropdownMenu.style.display = 'none';
+}
 
-    // Optional: Dynamically load dropdown content here if necessary
-    // For example, you could populate servicesDropdown.innerHTML
-});
+serviceBtn.addEventListener('mouseenter', showDropdown);
+
+dropdownMenu.addEventListener('mouseenter', showDropdown);
+
+serviceBtn.addEventListener('mouseleave', hideDropdown);
+dropdownMenu.addEventListener('mouseleave', hideDropdown);
+
+
