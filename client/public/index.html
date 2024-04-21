@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/style/index.css"> <!--CSS Stylesheet-->
+    <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet"> <!--Google Fonts-->
@@ -13,16 +14,27 @@
     <header>
         <nav>
             <h1>Tech Biz</h1>
-            <ul class="main-menu">
-                <a href="#"><li class="menu-items">About</li></a>
-                <a href="#"><li class="menu-items" id="servicesLink">Services</li></a>
-                    <div id="servicesDropdown" class="services-dropdown">
+            <i class="nav-icons fa-solid fa-bars" id="menu-bars"></i>
+            <i class="nav-icons fa-solid fa-x" id="menu-close"></i>
+            <ul class="main-menu" id="mainMenu">
+                <a href="#" class="nav-links">
+                    <li class="menu-items">About</li>
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+                <a href="#"  class="nav-links">
+                    <li class="menu-items" id="servicesLink">Services</li>
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+                <div id="servicesDropdown" class="services-dropdown">
                         <div class="dropdown-design">
                             <section>
                                 <a href="#">Website Development</a>
                                 <ul class="service-items">
+                                    <a href="#"><li>UI/UX</li></a>
                                     <a href="#"><li>Static Websites</li></a>
                                     <a href="#"><li>Dynamic Websites</li></a>
+                                    <a href="#"><li>CMS-based Websites</li></a>
+                                    <a href="#"><li>Custom CMS Solutions</li></a>
                                 </ul>
                             </section>
                             <section>
@@ -40,10 +52,12 @@
                                 </ul>
                             </section>
                             <section>
-                                <a href="#">Digital Content Management</a>
+                                <a href="#">Digital Transformation</a>
                                 <ul class="service-items">
-                                    <a href="#"><li>CMS-based Websites</li></a>
-                                    <a href="#"><li>Custom CMS Solutions</li></a>
+                                    <a href="#"><li>CRM Systems</li></a>
+                                    <a href="#"><li>Supply Chain Management</li></a>
+                                    <a href="#"><li>Business Intelligence (BI)</li></a>
+                                    <a href="#"><li>ERP Solutions</li></a>
                                 </ul>
                             </section>
                             <section>
@@ -54,8 +68,10 @@
                                 </ul>
                             </section>
                         </div>
-                    </div>
-                <a href="#"><li class="menu-items">Contact us</li></a>
+                </div>
+                <a href="#" id="contact-button">
+                    <li class="menu-items"><button>Contact us</button></li>
+                </a>
             </ul>
         </nav>
     </header>
