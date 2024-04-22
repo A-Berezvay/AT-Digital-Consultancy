@@ -19,16 +19,17 @@
             <ul class="main-menu" id="mainMenu">
                 <a href="#" class="nav-links">
                     <li class="menu-items">About</li>
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-plus" id="about-plus-icon"></i>
                 </a>
                 <a href="#"  class="nav-links" id="servicesLink">
                     <li class="menu-items">Services</li>
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-minus" id="services-minus-icon"></i>
+                    <i class="fa-solid fa-plus" id="services-plus-icon"></i>
                 </a>
                 <div id="servicesDropdown" class="services-dropdown">
                         <div class="dropdown-design">
                             <section>
-                                <a href="#">Website Development</a>
+                                <a href="#" class="service-categories">Website Development</a>
                                 <ul class="service-items">
                                     <a href="#"><li>UI/UX</li></a>
                                     <a href="#"><li>Static Websites</li></a>
@@ -38,21 +39,7 @@
                                 </ul>
                             </section>
                             <section>
-                                <a href="#">Basic App Development</a>
-                                <ul class="service-items">
-                                    <a href="#"><li>Productivity Tools</li></a>
-                                    <a href="#"><li>Educational Apps</li></a>
-                                </ul>
-                            </section>
-                            <section>
-                                <a href="#">Data Management</a>
-                                <ul class="service-items">
-                                    <a href="#"><li>Database Setup and Maintenance</li></a>
-                                    <a href="#"><li>Simple Analytics Tools</li></a>
-                                </ul>
-                            </section>
-                            <section>
-                                <a href="#">Digital Transformation</a>
+                                <a href="#" class="service-categories">Digital Transformation</a>
                                 <ul class="service-items">
                                     <a href="#"><li>CRM Systems</li></a>
                                     <a href="#"><li>Supply Chain Management</li></a>
@@ -61,7 +48,7 @@
                                 </ul>
                             </section>
                             <section>
-                                <a href="#">Tech Consultation</a>
+                                <a href="#" class="service-categories">Tech Consultation</a>
                                 <ul class="service-items">
                                     <a href="#"><li>Technology Audits</li></a>
                                     <a href="#"><li>Basic Digital Strategy</li></a>
@@ -76,12 +63,34 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h1>Digital Transformation for Startups</h1>
+        <section class="main-sections" id="hero">
+            <h1>Empowering Your Business with Digital Solutions</h1>
+            <p>Transform your operations and boost efficiency with our comprehensive tech services.</p>
+            <a href="#"><button>Our Services</button></a>
         </section>
-        <section class="introduction">
+        <section class="main-sections" id="services">
+            <article class="services-articles" id="digital-transformation">
+                <img class="service-article-img" src="../src/assets/Images/digital_transformation.jpg" alt="#">
+                <div class="service-article-description">
+                    <h2>Digital Transformations</h2>
+                    <p>Embrace the digital age and transform your business with our comprehensive digital transformation services. We help organizations streamline their operations, enhance customer experiences, and boost productivity by integrating advanced digital technologies into their day-to-day operations. From automating manual processes with AI to implementing cutting-edge CRM and ERP systems, our strategies are designed to future-proof your business. Partner with us to unlock new growth opportunities and maintain a competitive edge in your industry.</p>
+                </div>
+            </article>
+            <article class="services-articles" id="web-dev">
+                <img class="service-article-img" src="../src/assets/Images/web_dev.jpg" alt="#">
+                <div class="service-article-description">
+                    <h2>Web Development</h2>
+                    <p>In today’s digital world, a robust online presence is crucial. Our web development services provide tailored solutions ranging from static websites for small businesses to complex, dynamic web applications for large enterprises. Utilizing the latest technologies, we ensure that your site is not only visually appealing but also highly functional, secure, and optimized for search engines. Whether you need an e-commerce platform, a professional blog, or a custom web application, our team works closely with you to create a website that fits your brand and meets your specific business needs.</p>
+                </div>
+            </article>
+            <article class="services-articles" id="consultation">
+                <h2>Consultation</h2>
+                <p>Navigating the complex world of technology can be challenging, especially when trying to align it with business goals. Our consultancy services provide expert guidance and strategic planning to help you overcome these challenges. We specialize in technology audits, IT strategy development, and implementation support across various domains, including cybersecurity, data management, and cloud solutions. By understanding your unique business context, our consultants offer personalized advice to optimize your technology investments and drive sustainable growth.</p>
+            </article>
+        </section>
+        <section class="main-sections" id="introduction">
             <h2>Who we are</h2>
-            <p>Meet the team...</p>
+            <p>Founded on the principle of making high-tech solutions accessible, We at [Your Company Name] are dedicated to helping businesses thrive in the digital era. Our team of experts brings together years of experience in technology and innovation to deliver results that matter.</p>
         </section>
     </main>
     <footer></footer>

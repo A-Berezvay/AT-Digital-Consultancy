@@ -1,9 +1,8 @@
-/* ===HEADER NAVIGATION=== */
+/* === HEADER NAVIGATION === */
 
 const serviceBtn = document.getElementById('servicesLink');
 const dropdownMenu = document.getElementById('servicesDropdown');
 
-dropdownMenu.style.display = 'none';
 
 function showDropdown() {
     dropdownMenu.style.display = 'block';
@@ -22,6 +21,12 @@ dropdownMenu.addEventListener('mouseleave', hideDropdown);
 
    //RESPONSIVE NAVIGATION
 
+const servicesPlusIcon = document.getElementById('services-plus-icon');
+const servicesMinusIcon = document.getElementById('services-minus-icon');
+const aboutPlusIcon = document.getElementById('about-plus-icon');
+
+servicesMinusIcon.style.display = 'none';
+
 function updateEventListeners() {
     const isMobile = window.matchMedia('(max-width: 1280px)').matches;
 
@@ -31,12 +36,24 @@ function updateEventListeners() {
         dropdownMenu.removeEventListener('mouseenter', showDropdown);
         dropdownMenu.removeEventListener('mouseleave', hideDropdown);
 
-        serviceBtn.onclick = () => {
-            const isDisplayed = dropdownMenu.style.display === 'block';
-            dropdownMenu.style.display = isDisplayed ? 'none' : 'block';
-        };
+        dropdownMenu.style.display = 'none';
+
+        serviceBtn.addEventListener('click', function() {
+            if (dropdownMenu.style.display === 'none') {
+                dropdownMenu.style.display = 'block';
+                servicesPlusIcon.style.display = 'none';
+                servicesMinusIcon.style.display = 'block';
+            } else {
+                dropdownMenu.style.display = 'none';
+                servicesPlusIcon.style.display = 'block';
+                servicesMinusIcon.style.display = 'none';
+            }
+        });
+
     } else {
         serviceBtn.onclick = null;
+        servicesPlusIcon.style.display = 'none';
+        aboutPlusIcon.style.display = 'none';
 
         serviceBtn.addEventListener('mouseenter', showDropdown);
         serviceBtn.addEventListener('mouseleave', hideDropdown);
@@ -51,7 +68,6 @@ window.addEventListener('resize', updateEventListeners);
 
 const menuIcon = document.getElementById('menu-bars');
 const menuCloseIcon = document.getElementById('menu-close');
-const plusIcon = document.getElementsByClassName('fa-plus');
 const mainMenu = document.getElementById('mainMenu');
 let isMenuOpen = false;
 
