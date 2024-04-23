@@ -38,7 +38,8 @@ function updateEventListeners() {
 
         dropdownMenu.style.display = 'none';
 
-        serviceBtn.addEventListener('click', function() {
+        serviceBtn.addEventListener('click', function(event) {
+            event.preventDefault();
             if (dropdownMenu.style.display === 'none') {
                 dropdownMenu.style.display = 'block';
                 servicesPlusIcon.style.display = 'none';
