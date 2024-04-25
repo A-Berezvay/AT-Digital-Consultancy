@@ -1,5 +1,7 @@
 /* === HEADER NAVIGATION === */
 
+
+const header = document.querySelector('header');
 const serviceBtn = document.getElementById('servicesLink');
 const dropdownMenu = document.getElementById('servicesDropdown');
 
@@ -11,6 +13,16 @@ function showDropdown() {
 function hideDropdown() {
     dropdownMenu.style.display = 'none';
 }
+
+function toggleHeaderBackground() {
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+}
+
+window.addEventListener('scroll', toggleHeaderBackground);
 
 serviceBtn.addEventListener('mouseenter', showDropdown);
 

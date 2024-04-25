@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, a {
     font-family: "Quattrocento", serif;
+    line-height: 25px;
 }
 
 /* ===HEADER DESIGN=== */
@@ -55,6 +56,11 @@ header{
     width: 100%;
     padding: 0 10px;
     height: 50px;
+    transition: all 0.5s ease-in;
+}
+
+.scrolled{
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 header nav{
@@ -201,20 +207,27 @@ header nav{
     align-items: center;
 }
 
-.hero-section{
+#hero img{
+    height: 100%;
+    width: 100%;
     position: absolute;
-    width: 100%;
-    height: 100vh;
-}
-
-.hero-section img{
-    width: 100%;
-    height:auto;
-    object-fit: contain;
+    z-index: -1;
     opacity: 0.5;
+    object-fit:cover;
 }
 
-/* ===INTRODUCTION=== */
+#hero h1{
+    font-size: 3em;
+}
+
+#hero p{
+    margin: 40px 0;
+    font-size: 1.75em;
+}
+
+#hero button{
+    font-size: 1em;
+}
 
 
 /* === SERVICES === */
@@ -233,7 +246,7 @@ header nav{
     padding: 20px;
     width: 70%;
     height: auto;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 
 #digital-transformation{
@@ -283,4 +296,71 @@ header nav{
         flex-direction: column;
         align-items: center;
     }
+}
+
+
+/* ===INTRODUCTION=== */
+
+#introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+/* === CTA === */
+
+#cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: grey;
+    height: 30vh;
+}
+
+/* === FOOTER === */
+
+footer{
+    padding: 50px 0 10px 0;
+}
+
+.footer-nav-links{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-nav-links-design{
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.footer-nav-social i{
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+.agency-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px black solid;
+    margin: 10px 80px;
+    padding: 30px 0;
+}
+
+.footer-legal{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-legal a{
+    border-left: 1px solid black;
+    padding: 0 10px;
+}
+
+.footer-legal p{
+    padding: 0 10px;
 }
