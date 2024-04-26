@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/style/about.css"> <!--CSS Stylesheet-->
+    <link rel="stylesheet" href="../src/style/about.css"> <!--CSS Stylesheet (Local)-->
+    <link rel="stylesheet" href="../src/style/global.css"> <!--CSS Stylesheet (Global)-->
     <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
@@ -79,54 +80,104 @@
         </section>
         <section class="main-sections" id="commitments-section">
             <h2>Our commitments</h2>
-            <div class="commitments">
-                <h3>Employee Well-being</h3>
-                <i class="fa-solid fa-heart-pulse"></i>
+            <div class="commitments-display">
+                <div class="commitments">
+                    <h3>Employee Well-being</h3>
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div class="commitments">
+                    <h3>Learning & Development</h3>
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <div class="commitments">
+                    <h3>Environmental Sustainability</h3>
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="commitments">
+                    <h3>Community Engagement</h3>
+                    <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <div class="commitments">
+                    <h3>Continuous Improvement</h3>
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
             </div>
-            <div class="commitments">
-                <h3>Learning & Development</h3>
-                <i class="fa-solid fa-book"></i>
-            </div>
-            <div class="commitments">
-                <h3>Environmental Sustainability</h3>
-                <i class="fa-solid fa-leaf"></i>
-            </div>
-            <div class="commitments">
-                <h3>Community Engagement</h3>
-                <i class="fa-solid fa-people-roof"></i>
-            </div>
-            <div class="commitments">
-                <h3>Continuous Improvement</h3>
-                <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <div></div>
         </section>
-        <section class="main-sections">
+        <section class="main-sections" id="our-values">
             <h2>Our Core Values</h2>
-            <p>Lorem Ipsum Dolor sit amet</p>
-            <article>
-                <span>01</span>
-                <h3>Ensure impactful Innovations</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
-            <article>
-                <span>02</span>
-                <h3>Ensure impactful Innovations</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
-            <article>
-                <span>03</span>
-                <h3>Ensure impactful Innovations</h3>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
+            <p>At Tech Biz, our core values are more than just words—they are the foundation of our business operations and guide our every decision. These principles inspire us to achieve excellence in everything we do and to uphold the trust placed in us by our clients and partners.</p>
+            <div class="values-display">
+                <article>
+                    <span>01</span>
+                    <h3>Innovation with Impact</h3>
+                    <p>We believe that innovation should not only be groundbreaking but also deliver measurable impact. Our approach combines cutting-edge technology with creative thinking to develop solutions that not only meet the current market needs but also anticipate future trends.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Integrity and Transparency</h3>
+                    <p>Integrity and transparency are at the heart of all our interactions. Whether it’s dealing with clients, partners, or team members, we strive for honesty and openness in our communications and business practices, ensuring a trustful and respectful working environment.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Commitment to Excellence</h3>
+                    <p>Our commitment to excellence is unwavering. From the smallest task to the largest project, we pursue the highest standards of quality. This relentless pursuit of excellence drives us to continuously improve and deliver outstanding results that exceed expectations.</p>
+                </article>
+            </div>
         </section>
-        <section class="main-sections">
+        <section class="main-sections" id="cta">
             <h2>Join the Tech Biz team!</h2>
-            <p>Lorem ipsum dolor sit amet</p>
+            <p>Are you passionate about innovation and technology? Do you strive to work in an environment that challenges you and supports your growth? Tech Biz is looking for talented individuals like you to join our dynamic team. Become a part of our mission to deliver cutting-edge solutions and push the boundaries of what technology can achieve. Explore our exciting career opportunities today and help us shape the future!</p>
             <a href=""><button>Apply Now</button></a>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <section>
+            <nav class="footer-nav-links">
+                <div>
+                    <h3>About</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>Our Company</li></a>
+                        <a href=""><li>Core Team</li></a>
+                        <a href=""><li>Career</li></a>
+                        <a href=""><li>How we work</li></a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>CRM Systems</li></a>
+                        <a href=""><li>Supply Chain Management</li></a>
+                        <a href=""><li>Business Intelligence (BI)</li></a>
+                        <a href=""><li>ERP Solutions</li></a>
+                        <a href=""><li>More...</li></a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Industries</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>Hospitality</li></a>
+                        <a href=""><li>eCommerce</li></a>
+                        <a href=""><li>SaaS</li></a>
+                    </ul>
+                </div>
+                <div class="footer-nav-social">
+                    <h3>Social</h3>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </nav>
+        </section>
+        <section class="agency-description">
+            <p>Digital Transformation & Web Development Agency</p>
+        </section>
+        <section class="footer-legal">
+            <p>2024 &copy; Tech Biz</p>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+        </section>
+    </footer>
     <script src="../src/global.js"></script>
 </body>
 </html>

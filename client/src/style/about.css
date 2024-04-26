@@ -229,7 +229,7 @@ header nav{
     display: flex;
 }
 
-#who-we-are article h2, p{
+#who-we-are article h2{
     width: 50%;
     font-size: 1.25em;
 }
@@ -243,8 +243,19 @@ header nav{
 #commitments-section{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0 50px;
+    height: 50vh;
+}
+
+#commitments-section h2{
+    margin: 50px 0;
+}
+
+.commitments-display{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
 }
 
 .commitments{
@@ -255,5 +266,79 @@ header nav{
 }
 
 .commitments i{
-    font-size: 4em;
+    font-size: 2em;
+    margin-right: 10px;
 }
+
+@media (max-width:1200px){
+    .commitments{
+        padding: 20px 10px;
+    }
+} 
+
+
+
+/* === OUR VALUES === */
+
+#our-values{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+    height: auto;
+}
+
+#our-values h2{
+    margin: 20px 0;
+}
+
+#our-values p {
+    padding: 0 20px;
+}
+
+.values-display{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.values-display article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 33%;
+    padding: 0;
+    height: auto;
+}
+
+.values-display article span{
+    color: blue;
+    font-size: 4em;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+@media (max-width: 1100px){
+    .values-display{
+        flex-direction: column;
+    }
+}
+
+/* === CALL TO ACTION === */
+
+#cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+#cta p{
+    margin: 20px 0;
+}
+
