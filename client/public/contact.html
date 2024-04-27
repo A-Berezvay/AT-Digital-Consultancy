@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style/contact.css"> <!--CSS Stylesheet (Local)-->
+    <link rel="stylesheet" href="../src/style/global.css"> <!--CSS Stylesheet (Global)-->
+    <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet"> <!--Google Fonts-->
+    <title>Contact Tech Biz | Software Development & Digital Transformation Agency</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html"><h1>Tech Biz</h1></a>
+            <i class="nav-icons fa-solid fa-bars" id="menu-bars"></i>
+            <i class="nav-icons fa-solid fa-x" id="menu-close"></i>
+            <ul class="main-menu" id="mainMenu">
+                <a href="#" class="nav-links">
+                    <li class="menu-items">About</li>
+                    <i class="fa-solid fa-plus" id="about-plus-icon"></i>
+                </a>
+                <a href="#"  class="nav-links" id="servicesLink">
+                    <li class="menu-items">Services</li>
+                    <i class="fa-solid fa-minus" id="services-minus-icon"></i>
+                    <i class="fa-solid fa-plus" id="services-plus-icon"></i>
+                </a>
+                <div id="servicesDropdown" class="services-dropdown">
+                        <div class="dropdown-design">
+                            <section>
+                                <a href="web-dev.html" class="service-categories">Website Development</a>
+                                <ul class="service-items">
+                                    <a href="./ui-ux-design.html"><li>UI/UX</li></a>
+                                    <a href="static.html"><li>Static Websites</li></a>
+                                    <a href="dynamic.html"><li>Dynamic Websites</li></a>
+                                    <a href="cms-based.html"><li>CMS-based Websites</li></a>
+                                    <a href="#"><li>Custom CMS Solutions</li></a>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#" class="service-categories">Digital Transformation</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>CRM Systems</li></a>
+                                    <a href="#"><li>Supply Chain Management</li></a>
+                                    <a href="#"><li>Business Intelligence (BI)</li></a>
+                                    <a href="#"><li>ERP Solutions</li></a>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#" class="service-categories">Tech Consultation</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>Technology Audits</li></a>
+                                    <a href="#"><li>Basic Digital Strategy</li></a>
+                                </ul>
+                            </section>
+                        </div>
+                </div>
+                <a href="#" id="contact-button">
+                    <li class="menu-items"><button>Contact us</button></li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact-form-section">
+            <h1>Contact Us</h1>
+            <p>Please fill in the form below to send us your inquiries. Whether you need more information about our services or have specific project requirements, we're here to help!</p>
+            <form action="/submit-form" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget:</label>
+                    <select id="budget" name="budget">
+                        <option value="Less than £1000">Less than £1000</option>
+                        <option value="£1000-£5000">Between £1000-£5000</option>
+                        <option value="More than £5000">More than £5000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="file">Attach a file:</label>
+                    <input type="file" id="file" name="file">
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <nav class="footer-nav-links">
+                <div>
+                    <h3>About</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>Our Company</li></a>
+                        <a href=""><li>Core Team</li></a>
+                        <a href=""><li>Career</li></a>
+                        <a href=""><li>How we work</li></a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>CRM Systems</li></a>
+                        <a href=""><li>Supply Chain Management</li></a>
+                        <a href=""><li>Business Intelligence (BI)</li></a>
+                        <a href=""><li>ERP Solutions</li></a>
+                        <a href=""><li>More...</li></a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Industries</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>Hospitality</li></a>
+                        <a href=""><li>eCommerce</li></a>
+                        <a href=""><li>SaaS</li></a>
+                    </ul>
+                </div>
+                <div class="footer-nav-social">
+                    <h3>Social</h3>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </nav>
+        </section>
+        <section class="agency-description">
+            <p>Digital Transformation & Web Development Agency</p>
+        </section>
+        <section class="footer-legal">
+            <p>2024 &copy; Tech Biz</p>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+        </section>
+    </footer>
+    <script src="../src/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style/web-dev.css"> <!--CSS Stylesheet (Local)-->
+    <link rel="stylesheet" href="../src/style/global.css"> <!--CSS Stylesheet (Global)-->
+    <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet"> <!--Google Fonts-->
+    <title>Website Development Tech Biz | Software Development & Digital Transformation Agency</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><h1>Tech Biz</h1></a>
+            <i class="nav-icons fa-solid fa-bars" id="menu-bars"></i>
+            <i class="nav-icons fa-solid fa-x" id="menu-close"></i>
+            <ul class="main-menu" id="mainMenu">
+                <a href="about.html" class="nav-links">
+                    <li class="menu-items">About</li>
+                    <i class="fa-solid fa-plus" id="about-plus-icon"></i>
+                </a>
+                <a href="#"  class="nav-links" id="servicesLink">
+                    <li class="menu-items">Services</li>
+                    <i class="fa-solid fa-minus" id="services-minus-icon"></i>
+                    <i class="fa-solid fa-plus" id="services-plus-icon"></i>
+                </a>
+                <div id="servicesDropdown" class="services-dropdown">
+                        <div class="dropdown-design">
+                            <section>
+                                <a href="#" class="service-categories">Website Development</a>
+                                <ul class="service-items">
+                                    <a href="./ui-ux-design.html"><li>UI/UX</li></a>
+                                    <a href="static.html"><li>Static Websites</li></a>
+                                    <a href="dynamic.html"><li>Dynamic Websites</li></a>
+                                    <a href="cms-based.html"><li>CMS-based Websites</li></a>
+                                    <a href="custom-cms.html"><li>Custom CMS Solutions</li></a>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#" class="service-categories">Digital Transformation</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>CRM Systems</li></a>
+                                    <a href="#"><li>Supply Chain Management</li></a>
+                                    <a href="#"><li>Business Intelligence (BI)</li></a>
+                                    <a href="#"><li>ERP Solutions</li></a>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#" class="service-categories">Tech Consultation</a>
+                                <ul class="service-items">
+                                    <a href="#"><li>Technology Audits</li></a>
+                                    <a href="#"><li>Basic Digital Strategy</li></a>
+                                </ul>
+                            </section>
+                        </div>
+                </div>
+                <a href="contact.html" id="contact-button">
+                    <li class="menu-items"><button>Contact us</button></li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-sections" id="hero">
+            <h1>Explore Our Comprehensive Web Development Services</h1>
+            <p>From initial design to full-scale development, discover the perfect web solution tailored just for your business needs.</p>
+            <a href="#services-overview"><button>Find Your Solution</button></a>
+        </section>
+        <section class="main-sections" id="services">
+            <div>
+                <h2>Our Web Development Services</h2>
+                <p>Whether you're looking to launch a new website or enhance an existing one, our diverse range of services covers all your needs. Choose a category below to learn more:</p>
+            </div>
+            <div class="service-links">
+                <a href="ui-ux-design.html">UI/UX Design</a>
+                <a href="static.html">Static Websites</a>
+                <a href="dynamic.html">Dynamic Websites</a>
+                <a href="cms-based.html">CMS-based Websites</a>
+                <a href="custom-cms.html">Custom CMS Solutions</a>
+            </div>
+        </section>
+        <section class="main-sections" id="guided-services-display">
+        <!-- UI/UX Design -->
+            <article class="guided-services">
+                <h3>UI/UX Design</h3>
+                <p>Perfect for businesses looking to create a compelling and intuitive user experience that captivates and converts visitors.</p>
+                <a href="ui-ux-design.html"><button>Learn more about UI/UX Design</button></a>
+            </article>
+        <!-- Static Websites -->
+            <article class="guided-services">
+                <h3>Static Websites</h3>
+                <p>Ideal for smaller businesses or projects that require a fast, secure, and easy-to-maintain online presence without complex functionalities.</p>
+                <a href="static.html"><button>Discover Static Websites</button></a>
+            </article>
+        <!-- Dynamic Websites -->
+            <article class="guided-services">
+                <h3>Dynamic Websites</h3>
+                <p>Best suited for businesses needing interactive and real-time content features such as e-commerce platforms, forums, or membership sites.</p>
+                <a href="dynamic.html"><button>Explore Dynamic Websites</button></a>
+            </article>
+        <!-- CMS-based Websites -->
+            <article class="guided-services">
+                <h3>CMS-based Websites</h3>
+                <p>Great for clients who require regular content updates with a user-friendly system that doesn’t demand much technical expertise.</p>
+                <a href="cms-based.html"><button>Learn more about CMS-based Solutions</button></a>
+            </article>
+        <!-- Custom CMS Solutions -->
+            <article class="guided-services">
+                <h3>Custom CMS Solutions</h3>
+                <p>The go-to choice for enterprises needing a tailored solution that fits exactly to their complex content management requirements.</p>
+                <a href="custom-cms.html"><button>Custom CMS Details</button></a>
+            </article>
+        </section>
+        <section class="main-sections" id="cta">
+            <h2>Not Sure Which Solution Fits Best? Let's Talk!</h2>
+            <p>Reach out to us, and let’s discuss how we can tailor our services to your specific needs, ensuring your website not only meets but exceeds expectations.</p>
+            <a href="/contact"><button>Contact Us Now</button></a>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <nav class="footer-nav-links">
+                <div>
+                    <h3>About</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>Our Company</li></a>
+                        <a href=""><li>Core Team</li></a>
+                        <a href=""><li>Career</li></a>
+                        <a href=""><li>How we work</li></a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>CRM Systems</li></a>
+                        <a href=""><li>Supply Chain Management</li></a>
+                        <a href=""><li>Business Intelligence (BI)</li></a>
+                        <a href=""><li>ERP Solutions</li></a>
+                        <a href=""><li>More...</li></a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Industries</h3>
+                    <ul class="footer-nav-links-design">
+                        <a href=""><li>Hospitality</li></a>
+                        <a href=""><li>eCommerce</li></a>
+                        <a href=""><li>SaaS</li></a>
+                    </ul>
+                </div>
+                <div class="footer-nav-social">
+                    <h3>Social</h3>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </nav>
+        </section>
+        <section class="agency-description">
+            <p>Digital Transformation & Web Development Agency</p>
+        </section>
+        <section class="footer-legal">
+            <p>2024 &copy; Tech Biz</p>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+        </section>
+    </footer>
+    <script src="../src/global.js"></script>
+</body>
+</html>
