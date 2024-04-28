@@ -1,6 +1,6 @@
 # Digital Transformation and Web Development Agency Website
 
-Welcome to the official repository for our Digital Transformation and Web Development Agency Webdite, where we focusing on delivering digital solutions to clients.
+Welcome to the official repository for our Digital Transformation and Web Development Agency Website, where we're focusing on delivering digital solutions to clients.
 
 ## About This Project
 
