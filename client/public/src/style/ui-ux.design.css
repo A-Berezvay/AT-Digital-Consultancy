@@ -1,0 +1,71 @@
+/* === HERO === */
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#hero img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    object-fit:cover;
+}
+
+#hero h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p{
+    font-size: 1.75em;
+    line-height: 35px;
+}
+
+/* === THE PROCESS === */
+
+#process{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;  
+  padding: 0 50px;
+  height: 80vh;
+}
+
+.process-display{
+    display: flex;
+    justify-content: space-around;
+}
+
+.process-items{
+    position: relative;
+    border: 1px black solid;
+    border-radius: 20px;
+    width: 17%;
+    padding: 20px 10px;
+}
+
+.process-items span{
+    font-size: 4em;
+    font-weight: 700;
+    position: absolute;
+    right: 30px;
+    top: -50px;
+    color: blue;
+    background-color: white;
+
+}
+
+/* === CALL TO ACTION === */
+
+#cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
