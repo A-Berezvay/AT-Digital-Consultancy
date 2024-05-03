@@ -37,6 +37,11 @@ const servicesPlusIcon = document.getElementById('services-plus-icon');
 const servicesMinusIcon = document.getElementById('services-minus-icon');
 const aboutPlusIcon = document.getElementById('about-plus-icon');
 
+const menuIcon = document.getElementById('menu-bars');
+const menuCloseIcon = document.getElementById('menu-close');
+const mainMenu = document.getElementById('mainMenu');
+let isMenuOpen = false;
+
 servicesMinusIcon.style.display = 'none';
 
 function updateEventListeners() {
@@ -49,6 +54,19 @@ function updateEventListeners() {
         dropdownMenu.removeEventListener('mouseleave', hideDropdown);
 
         dropdownMenu.style.display = 'none';
+
+        console.log("The screen is under 1280px wide.");
+        menuIcon.addEventListener('click', function() {
+            mainMenu.style.display = 'block';
+            menuCloseIcon.style.display = 'block';
+            menuIcon.style.display = 'none';
+        })
+
+        menuCloseIcon.addEventListener('click', function() {
+            mainMenu.style.display = 'none';
+            menuIcon.style.display = 'block';
+            menuCloseIcon.style.display = 'none';
+            })
 
         serviceBtn.addEventListener('click', function(event) {
             event.preventDefault();
@@ -68,6 +86,11 @@ function updateEventListeners() {
         servicesPlusIcon.style.display = 'none';
         aboutPlusIcon.style.display = 'none';
 
+        menuCloseIcon.style.display = 'none';
+        menuIcon.style.display = 'none';
+    
+        console.log("The screen is wider than 1280px.");
+
         serviceBtn.addEventListener('mouseenter', showDropdown);
         serviceBtn.addEventListener('mouseleave', hideDropdown);
         dropdownMenu.addEventListener('mouseenter', showDropdown);
@@ -78,34 +101,6 @@ function updateEventListeners() {
 updateEventListeners();
 
 window.addEventListener('resize', updateEventListeners);
-
-const menuIcon = document.getElementById('menu-bars');
-const menuCloseIcon = document.getElementById('menu-close');
-const mainMenu = document.getElementById('mainMenu');
-let isMenuOpen = false;
-
-if (window.matchMedia('(max-width: 1280px)').matches) {
-    // Code to execute when the viewport width is less than or equal to 1280 pixels
-    console.log("The screen is under 1280px wide.");
-    menuIcon.addEventListener('click', function() {
-        mainMenu.style.display = 'block';
-        menuCloseIcon.style.display = 'block';
-        menuIcon.style.display = 'none';
-    });
-
-
-    menuCloseIcon.addEventListener('click', function() {
-    mainMenu.style.display = 'none';
-    menuIcon.style.display = 'block';
-    menuCloseIcon.style.display = 'none';
-    });
-} else {
-    // Code to execute when the viewport width is greater than 1280 pixels
-    menuCloseIcon.style.display = 'none';
-    menuIcon.style.display = 'none';
-
-    console.log("The screen is wider than 1280px.");
-}
 
 /* === CONTACT FORM === */
 

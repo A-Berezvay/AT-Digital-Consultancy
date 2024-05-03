@@ -45,6 +45,26 @@
     height: auto;
     margin: 50px 0;
     width: 25%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 5px;
+}
+
+.services-articles-image{
+    position: absolute;
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.content{
+    position: relative;
+    padding: 40px;
 }
 
 @media (max-width: 900px){
@@ -54,6 +74,18 @@
 
     .services-articles{
         width: 100%;
+    }
+
+    .services-articles-image{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 650px){
+    .services-articles-image{
+        height: 100%;
+        width: auto;
     }
 }
 

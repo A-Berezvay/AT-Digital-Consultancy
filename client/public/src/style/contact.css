@@ -33,3 +33,9 @@ button{
     display: block;
     margin: 0 auto;
 }
+
+@media (max-width:600px){
+    main{
+        padding: 90px 0;
+    }
+}
