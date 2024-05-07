@@ -45,9 +45,9 @@
     height: auto;
     margin: 50px 0;
     width: 25%;
-    height: auto;
+    height: 200px;
     position: relative;
-    overflow: hidden;
+    overflow:hidden;
     color: white;
     text-shadow: 1px 1px 2px black;
     border-radius: 5px;

@@ -17,6 +17,12 @@
     opacity: 0.5;
 }
 
+@media (max-width: 400px){
+    #hero h1{
+        font-size: 1em;
+    }
+}
+
 /* === WHO WE ARE === */
 
 #who-we-are{
@@ -57,6 +63,7 @@
 
     #who-we-are article p{
         width: 100%;
+        padding: 0;
     }
 }
 
@@ -100,7 +107,7 @@
 
 @media (max-width: 700px){
     .commitments-display{
-        justify-content: flex-start;
+        align-items: flex-start;
         flex-wrap: nowrap;
         flex-direction: column;
     }
@@ -158,6 +165,10 @@
 
     .values-display article{
         width: 100%;
+    }
+
+    #our-values p{
+        padding: 0;
     }
 }
 

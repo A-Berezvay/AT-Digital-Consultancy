@@ -4,6 +4,7 @@
 const header = document.querySelector('header');
 const serviceBtn = document.getElementById('servicesLink');
 const dropdownMenu = document.getElementById('servicesDropdown');
+const body = document.body
 
 
 function showDropdown() {
@@ -60,12 +61,14 @@ function updateEventListeners() {
             mainMenu.style.display = 'block';
             menuCloseIcon.style.display = 'block';
             menuIcon.style.display = 'none';
+            body.style.overflow = 'hidden';
         })
 
         menuCloseIcon.addEventListener('click', function() {
             mainMenu.style.display = 'none';
             menuIcon.style.display = 'block';
             menuCloseIcon.style.display = 'none';
+            body.style.overflow = 'auto';
             })
 
         serviceBtn.addEventListener('click', function(event) {
