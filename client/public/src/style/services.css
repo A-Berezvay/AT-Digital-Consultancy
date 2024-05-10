@@ -9,26 +9,22 @@
 }
 
 #hero img{
-    width: 100%;
     height: 100%;
+    width: 100%;
     position: absolute;
     z-index: -1;
-    object-fit: cover;
-    opacity: 0.5;
+    opacity: 0.2;
+    object-fit:cover;
 }
 
 #hero h1{
     font-size: 3em;
+    margin-bottom: 20px;
 }
 
 #hero p{
     font-size: 1.75em;
-    margin: 40px 0;
-    text-align: center;
-}
-
-#hero button{
-    font-size: 1em;
+    line-height: 35px;
 }
 
 @media (max-width: 400px){
@@ -43,52 +39,41 @@
 
 /* === SERVICES === */
 
-#services{
+#services-overview{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.service-links{
+.services-list{
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
+}
+
+.services-list article{
+    width: 20%;
+}
+
+.services-list button{
+    display: block;
+    margin: 10px auto;
 }
 
 @media (max-width: 1000px){
-    .service-links{
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-    }
-}
-
-/* === GUIDED SERVICES === */
-
-#guided-services-display{
-    display: flex;
-    justify-content: space-around;
-    height: auto;
-}
-
-.guided-services{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid black;
-    height: 300px;
-    width: 250px;
-}
-
-@media (max-width: 1000px){
-    #guided-services-display{
+    .services-list{
         flex-direction: column;
         align-items: center;
     }
 
-    .guided-services{
+    .services-list article{
+        width: 50%;
+    }
+}
+
+@media (max-width: 400px){
+    .services-list article{
         width: 100%;
-        padding: 0 30px;
     }
 }
 
@@ -97,8 +82,11 @@
 #cta{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    background-color: grey;
-    height: 30vh;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+#cta p{
+    margin: 20px 0;
 }
