@@ -8,9 +8,11 @@
 button {
     padding: 5px 10px;
     font-weight: 600;
-    border-radius: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
     background: rgba(255, 255, 255, 0.2);
     color: black;
+    background-color: white;
     cursor: pointer;
     transition: 0.5s ease;
 }
@@ -138,7 +140,7 @@ header nav{
         flex-direction: column;
         justify-content:center;
         align-items: flex-start;
-        z-index: 1;
+        z-index: 2;
         background-color: white;
         overflow-y: auto;
     }
@@ -200,7 +202,7 @@ header nav{
 
     #menu-close{
         display: none;
-        z-index: 2;
+        z-index: 10;
         font-size: 30px;
     }
 }
