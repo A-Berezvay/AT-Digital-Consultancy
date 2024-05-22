@@ -1,0 +1,55 @@
+/* === HERO === */
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#hero img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    object-fit:cover;
+}
+
+#hero h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p{
+    font-size: 1.75em;
+    line-height: 35px;
+}
+
+@media (max-width: 400px){
+    #hero h1{
+        font-size: 2em;
+    }
+
+    #hero p{
+        font-size: 1.25em;
+    }
+}
+
+/* === FILTER === */
+
+.filter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* === JOB DISPLAY === */
+
+.job{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 100px 20px;
+}

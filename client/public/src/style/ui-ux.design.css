@@ -29,7 +29,29 @@
     transition-delay: 800ms;
 }
 
+@media (prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
 
+@media (max-width: 1280px){
+    .process-items:nth-child(2) {
+        transition-delay: 200ms;
+    }
+    
+    .process-items:nth-child(3) {
+        transition-delay: 200ms;
+    }
+    
+    .process-items:nth-child(4) {
+        transition-delay: 200ms;
+    }
+    
+    .process-items:nth-child(5) {
+        transition-delay: 200ms;
+    }
+}
 
 /* === HERO === */
 
