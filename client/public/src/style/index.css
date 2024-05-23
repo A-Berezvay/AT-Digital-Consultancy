@@ -38,64 +38,34 @@
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
+    color: white;
 }
 
-.expandable-section {
-    position: relative;
-    overflow: hidden;
-    width: 25%;
-    max-height: 150px; /* Adjust based on how much text you want to show initially */
-    transition: max-height 0.5s ease;
-}
-
-.content {
+.services-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 10px;
     position: relative;
+    overflow: hidden;
+    border: 1px black solid;
+    border-radius: 5px;
+    height: 300px;
+    width: 25%;
 }
 
-.expandable-section::after {
-    content: '';
+.services-section img{
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    right: 0;
-    height: 40px; /* Height of the blurred area */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9)); /* Change color based on background */
-    pointer-events: none; /* Prevent the pseudo-element from being clickable */
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(50%);
 }
 
-.expand-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 10px;
-    cursor: pointer;
-}
 
-/* Style when section is expanded */
-.expandable-section.expanded {
-    max-height: 500px; /* Enough height to show all content */
-}
-
-@media (max-width: 1000px){
-    #services{
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        margin-top: 50px;
-    }
-
-    .expandable-section{
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .content{
-        margin-bottom: 50px;
-    }
-
-}
 
 
 
