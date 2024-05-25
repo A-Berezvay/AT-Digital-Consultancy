@@ -1,3 +1,11 @@
+:root {
+    --deep-blue: #111C26;
+    --slate-gray: #61788C;
+    --sand: #D9D1B8;
+    --soft-red: #BF8C80;
+    --off-white: #F2F2F2;
+}
+
 /* SCROLLING EFFECT */ 
 
 .hidden {
@@ -68,8 +76,8 @@
     width: 100%;
     position: absolute;
     z-index: -1;
-    opacity: 0.2;
     object-fit:cover;
+    filter: brightness(50%);
 }
 
 #hero h1{
@@ -109,7 +117,7 @@
 
 .process-items{
     position: relative;
-    border: 1px black solid;
+    border: 1px var(--off-white) solid;
     border-radius: 20px;
     width: 17%;
     padding: 20px 10px;
@@ -121,8 +129,8 @@
     position: absolute;
     right: 30px;
     top: -50px;
-    color: blue;
-    background-color: white;
+    color: var(--soft-red);
+    background-color: var(--slate-gray);
 
 }
 

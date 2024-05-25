@@ -1,3 +1,11 @@
+:root {
+    --deep-blue: #111C26;
+    --slate-gray: #61788C;
+    --sand: #D9D1B8;
+    --soft-red: #BF8C80;
+    --off-white: #F2F2F2;
+}
+
 /* === HERO === */
 
 #hero{
@@ -14,7 +22,7 @@
     position: absolute;
     z-index: -1;
     object-fit: cover;
-    opacity: 0.5;
+    filter: brightness(70%);
 }
 
 @media (max-width: 400px){
@@ -152,7 +160,7 @@
 }
 
 .values-display article span{
-    color: blue;
+    color: var(--soft-red);
     font-size: 4em;
     font-weight: 700;
     margin: 20px 0;
