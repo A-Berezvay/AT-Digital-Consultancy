@@ -130,7 +130,7 @@
     right: 30px;
     top: -50px;
     color: var(--soft-red);
-    background-color: var(--slate-gray);
+    background-color: var(--deep-blue);
 
 }
 
@@ -168,4 +168,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--slate-gray);
 }

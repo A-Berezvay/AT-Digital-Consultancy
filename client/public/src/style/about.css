@@ -105,6 +105,7 @@
 .commitments i{
     font-size: 2em;
     margin-right: 10px;
+    color: var(--off-white);
 }
 
 @media (max-width:1200px){
@@ -130,6 +131,7 @@
     flex-direction: column;
     align-items: center;
     height: auto;
+    margin: 50px 0;
 }
 
 #our-values h2{
@@ -143,7 +145,7 @@
 .values-display{
     display: flex;
     width: 100%;
-    height: auto;
+    margin: 40px 0;
     align-items: center;
     justify-content: center;
 }
@@ -183,11 +185,13 @@
 /* === CALL TO ACTION === */
 
 #cta{
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 50px;
+    padding: 50px;
+    background-color: var(--slate-gray);
 }
 
 #cta p{
