@@ -14,8 +14,10 @@
 /* ===PAGE COLORING=== */
 
 body{
-    background-color: var(--slate-gray);
+    background-color: var(--deep-blue);
 }
+
+
 
 
 /* ===BASIC STYLE=== */
@@ -66,10 +68,6 @@ p, a {
     color: var(--off-white);
 }
 
-li{
-    color: var(--off-white);
-}
-
 /* ===HEADER DESIGN=== */
 
 header{
@@ -82,7 +80,6 @@ header{
     height: 50px;
     transition: all 0.5s ease-in;
     z-index: 1;
-    color: var(--off-white);
 }
 
 .scrolled{
@@ -218,12 +215,14 @@ header nav{
     #menu-bars{
         display: block;
         font-size: 30px;
+        color: var(--off-white);
     }
 
     #menu-close{
         display: none;
         z-index: 10;
         font-size: 30px;
+        color: var(--off-white);
     }
 }
 
