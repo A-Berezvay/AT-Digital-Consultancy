@@ -1,3 +1,11 @@
+:root {
+    --deep-blue: #111C26;
+    --slate-gray: #61788C;
+    --sand: #D9D1B8;
+    --soft-red: #BF8C80;
+    --off-white: #F2F2F2;
+}
+
 main{
     padding: 100px;
 }
@@ -6,8 +14,13 @@ main{
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px #ccc;
+    background-color: var(--slate-gray);
+    box-shadow: 0 0 10px var(--sand);
+    border-radius: 5px;
+}
+
+#contact-form-section p{
+    color: var(--deep-blue);
 }
 
 .form-group {
@@ -17,6 +30,7 @@ main{
 label {
     display: block;
     margin-bottom: 5px;
+    color: var(--deep-blue);
 }
 
 input[type="text"],

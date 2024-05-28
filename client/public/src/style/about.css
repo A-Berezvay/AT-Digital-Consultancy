@@ -6,30 +6,9 @@
     --off-white: #F2F2F2;
 }
 
-/* === HERO === */
 
-#hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-}
 
-#hero img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    object-fit: cover;
-    filter: brightness(70%);
-}
 
-@media (max-width: 400px){
-    #hero h1{
-        font-size: 1em;
-    }
-}
 
 /* === WHO WE ARE === */
 
@@ -181,20 +160,3 @@
         padding: 0;
     }
 }
-
-/* === CALL TO ACTION === */
-
-#cta{
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    background-color: var(--slate-gray);
-}
-
-#cta p{
-    margin: 20px 0;
-}
-

@@ -1,40 +1,9 @@
-/* === HERO === */
-
-#hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-}
-
-#hero img{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.2;
-    object-fit:cover;
-}
-
-#hero h1{
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-#hero p{
-    font-size: 1.75em;
-    line-height: 35px;
-}
-
-@media (max-width: 400px){
-    #hero h1{
-        font-size: 2em;
-    }
-
-    #hero p{
-        font-size: 1.25em;
-    }
+:root {
+    --deep-blue: #111C26;
+    --slate-gray: #61788C;
+    --sand: #D9D1B8;
+    --soft-red: #BF8C80;
+    --off-white: #F2F2F2;
 }
 
 /* === FILTER === */
@@ -52,4 +21,8 @@
     justify-content: center;
     width: 100%;
     margin: 100px 20px;
+}
+
+.job li{
+    color: var(--off-white);
 }
