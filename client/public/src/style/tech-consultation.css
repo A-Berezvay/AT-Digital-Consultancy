@@ -6,6 +6,32 @@
     --off-white: #F2F2F2;
 }
 
+/* === TABLE === */
+
+#services{
+    height: auto;
+    padding: 50px;
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--slate-gray)
+}
+
+th,td{
+    border: 1px solid var(--sand);
+    padding: 8px;
+    text-align: center;
+    color: var(--off-white);
+}
+
+th {
+    background-color: var(--soft-red);
+    color: var(--off-white);
+}
+
 /* === SERVICES === */
 
 #services{
