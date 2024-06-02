@@ -97,42 +97,49 @@ header nav{
     list-style-type: none;
 }
 
+.main-menu a{
+    height: 100%;
+}
+
 .menu-items{
     padding: 20px 20px;
     position: relative;
+    height: 100%;
 }
 
 .drop-down{
     position: absolute;
+    top: 40px;
     left: 0;
-    top: 50px;
     padding: 20px;
     list-style-type: none;
     background-color: var(--deep-blue);
-    transform: translateY(-100%);
-    z-index: -10;
-    opacity: 0;
+    z-index: 10;
+    width: 100%;
     transition: all .5s ease;
 }
 
-.menu-items:hover > .drop-down {
-    transform: translateY(0);
-    opacity: 1;
-}
+
+
 .drop-down li{
     padding: 10px 0;
 }
 
-.nav-icons{
+#menu-bars{
     display: none;
+    z-index: 3;
+    color: var(--off-white);
+}
+
+#menu-close{
+    display: none;
+    z-index: 3;
+    color: var(--off-white);
 }
 
 @media (max-width:1280px){
-    .nav-icons{
-        display: block;
-    }
 
-    #mainMenu{
+    .main-menu{
         display: none;
         position: absolute;
         top: 0;
@@ -150,76 +157,60 @@ header nav{
 
     .menu-items{
         padding: 0;
+        margin: 25px 0;
+        font-size: 2em;
     }
 
-    .nav-links{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 50px;
-        border-bottom: 1px solid var(--off-white);
-        padding: 0;
-        z-index: 10;
+    .menu-items button{
+        font-size: .90em;
     }
 
-    #serviceLink{
-        position: relative;
-    }
-
-    .services-dropdown{
-        display: block;
+    .drop-down{
+        display: none;
         position: relative;
         top: 0;
-        width: 100%;
-        max-height: calc(100vh - 50px);
-        background-color: var(--deep-blue);
-        box-shadow: none;
+        transform: translateY(0);
+        opacity: 1;
+        font-size: 1.75em;
     }
 
-    .dropdown-design{
-        flex-direction: column;
-    }
-
-    .dropdown-design section{
-        margin: 10px 0 5px 0;
-        border-bottom: 1px var(--off-white) solid;
-    }
-
-    .service-items{
-        font-size: 1.3em;
-    }
-
-    #contact-button{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding: 50px 0;
+    .drop-down li{
+        margin: 50px 0;
     }
 
     #menu-bars{
-        display: block;
-        font-size: 30px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 3;
         color: var(--off-white);
+        font-size: 2.5em;
     }
 
     #menu-close{
-        display: none;
-        z-index: 10;
-        font-size: 30px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 3;
         color: var(--off-white);
+        font-size: 2.5em;
     }
+
+
 }
 
 @media (max-width: 650px){
-    .service-categories{
-        font-size: 1em;
+
+    .menu-items{
+        font-size: 1.75em;
+        margin: 25px 0;
     }
 
-    .service-items{
-        font-size: 0.95em;
+    .menu-items button {
+        font-size: .75em;
     }
+
 }
 
 /* ===HERO SECTION===*/
