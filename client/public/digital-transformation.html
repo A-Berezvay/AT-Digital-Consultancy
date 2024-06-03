@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style/digital-transformation.css?v=2805"> <!--CSS Stylesheet (Local)-->
-    <link rel="stylesheet" href="./src/style/global.css?v=2805"> <!--CSS Stylesheet (Global)-->
+    <link rel="stylesheet" href="./src/style/global.css?v=0306"> <!--CSS Stylesheet (Global)-->
     <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
@@ -14,49 +14,37 @@
 <body>
     <header>
         <nav>
-            <a href="./index.html"><h1>AT Digital Consultation</h1></a>
+            <a href="index.html"><h1>AT Digital Consultation</h1></a>
             <i class="nav-icons fa-solid fa-bars" id="menu-bars"></i>
             <i class="nav-icons fa-solid fa-x" id="menu-close"></i>
             <ul class="main-menu" id="mainMenu">
-                <a href="about.html" class="nav-links">
+                <a href="about.html">
                     <li class="menu-items">About</li>
-                    <i class="fa-solid fa-plus" id="about-plus-icon"></i>
                 </a>
-                <a href="services.html"  class="nav-links" id="servicesLink">
-                    <li class="menu-items">Services</li>
-                    <i class="fa-solid fa-minus" id="services-minus-icon"></i>
-                    <i class="fa-solid fa-plus" id="services-plus-icon"></i>
+                <a href="#">
+                    <li class="menu-items">Digital Transformation</li>
                 </a>
-                <div id="servicesDropdown" class="services-dropdown">
-                        <div class="dropdown-design">
-                            <section>
-                                <a href="web-dev.html" class="service-categories">Website Development</a>
-                                <ul class="service-items">
-                                    <a href="./ui-ux-design.html"><li>UI/UX</li></a>
-                                    <a href="static.html"><li>Static Websites</li></a>
-                                    <a href="dynamic.html"><li>Dynamic Websites</li></a>
-                                    <a href="cms-based.html"><li>CMS-based Websites</li></a>
-                                    <a href="custom-cms.html"><li>Custom CMS Solutions</li></a>
-                                </ul>
-                            </section>
-                            <section>
-                                <a href="#" class="service-categories">Digital Transformation</a>
-                                <ul class="service-items">
-                                    <a href="crm-systems.html"><li>CRM Systems</li></a>
-                                    <a href="supply-chain-management.html"><li>Supply Chain Management</li></a>
-                                    <a href="business-intelligence.html"><li>Business Intelligence (BI)</li></a>
-                                    <a href="erp-solutions.html"><li>ERP Solutions</li></a>
-                                </ul>
-                            </section>
-                            <section>
-                                <a href="tech-consultation.html" class="service-categories">Tech Consultation</a>
-                                <ul class="service-items">
-                                    <a href="tech-audits.html"><li>Technology Audits</li></a>
-                                    <a href="digital-strategy.html"><li>Basic Digital Strategy</li></a>
-                                </ul>
-                            </section>
-                        </div>
-                </div>
+                <li class="menu-items" id="webDevLink">
+                    <a href="web-dev.html">Web Development</a>
+                    <ul class="drop-down" id="webDevDropdown">
+                        <li><a href="ui-ux-design.html">UI/UX</a></li>
+                        <li><a href="static.html">Static Websites</a></li>
+                        <li><a href="dynamic.html">Dynamic Websites</a></li>
+                        <li><a href="cms-based.html">CMS Systems</a></li>
+                        <li><a href="custom-cms.html">Custom CMS Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="menu-items" id="softwareSolutionsLink">
+                    <a href="#">Software Solutions</a>
+                    <ul class="drop-down" id="softwareSolutionsDropdown">
+                        <a href="enterprise-web-hosting.html"><li>Enterprise Web Hosting</li></a>
+                        <a href="enterprise-resource-planning.html"><li>Enterprise Resource Planning</li></a>
+                        <a href="online-ordering-system.html"><li>Online Ordering System</li></a>
+                        <a href="pos.html"><li>Point of Sale</li></a>
+                        <a href="property-management-system.html"><li>Property Management System</li></a>
+                        <a href="software-testing.html"><li>Software Testing</li></a>
+                    </ul>
+                </li>
                 <a href="contact.html" id="contact-button">
                     <li class="menu-items"><button>Contact us</button></li>
                 </a>
@@ -64,133 +52,29 @@
         </nav>
     </header>
     <main>
-        <section class="main-sections" id="hero">
-            <h1>Drive Your Business Forward with Digital Transformation</h1>
-            <p>Embrace the power of digital technology to enhance efficiency, improve customer experiences, and innovate faster than ever before.</p>
+        <section id="hero" class="main-sections">
+            <h1>Design, Implementation, Support</h1>
+            <p>Transform your business from start to finish with our comprehensive services. We provide expert design, seamless implementation, and ongoing support to ensure your digital transformation journey is successful.</p>
+        </section>        
+        <section class="main-sections">
+            <h2>Digitising Your Service or Product Offering</h2>
+            <p>Digital transformation is all about integrating cutting-edge technology into every part of your business, changing the way you operate and deliver value to your customers. In today's fast-paced world, this shift is crucial for staying competitive, meeting customer demands, and taking advantage of the latest tech advancements. Embracing digital transformation means adopting powerful tools like Artificial Intelligence (AI), Blockchain, Internet of Things (IoT), and integrated software to boost your business performance, increase profits, reduce waste, and enhance employee engagement.</p>
+            <p>But digital transformation isn’t just about the tech. It's about people, processes, and culture coming together. Strong leadership is key to driving this change. By aligning IT with your business goals, you can overcome challenges and unlock new opportunities, ensuring your company thrives in the digital age. Embrace digital transformation to innovate, streamline operations, and grow sustainably in an increasingly digital world.</p>
         </section>
-        <section class="main-sections" id="guided-services-display">
-            <div>
-                <h2>Transform Your Business</h2>
-                <p>Explore our range of digital transformation services designed to help you capitalize on the latest technological advancements and industry best practices.</p>
-            </div>
-            <div>
-                <a href="crm-systems.html">
-                    <article class="guided-services">
-                        <h3>CRM Systems</h3>
-                        <p>Enhance your customer relationship management with advanced CRM systems that optimize customer interactions and increase sales efficiency. Ideal for businesses seeking to improve client engagement and automate sales processes.</p>
-                        <img src="./src/assets/Images/crm-systems.jpg" alt="">
-                    </article>
-                </a>
-                <a href="supply-chain-management.html">
-                    <article class="guided-services">
-                        <h3>Supply Chain Management</h3>
-                        <p>Revolutionize your supply chain operations with integrated management solutions that provide real-time visibility and improved logistics control. Perfect for businesses looking to streamline operations and reduce overhead costs.</p>
-                        <img src="./src/assets/Images/supply-chain-management.jpg" alt="">
-                    </article>
-                </a>
-                <a href="business-intelligence.html">
-                    <article class="guided-services">
-                        <h3>Business Intelligence (BI)</h3>
-                        <p>Drive smarter, data-driven decisions with Business Intelligence solutions that gather, analyze, and convert data into actionable insights. Suitable for organizations that want to harness the power of their data to gain a competitive edge.</p>
-                        <img src="./src/assets/Images/business-intelligence.jpg" alt="">
-                    </article>
-                </a>
-                <a href="erp-solutions.html">
-                <article class="guided-services">
-                    <h3>ERP Solutions</h3>
-                    <p>Integrate all your business processes into a single, unified system with ERP solutions that enhance efficiency and productivity. Ideal for companies looking to optimize operations and improve resource management across departments.</p>
-                    <img src="./src/assets/Images/erp-solutions.jpg" alt="">
-                </article>
-                </a>
-            </div>
+        <section class="main-sections">
+            <h2>Extensive Expertise in Digital Innovation Across Various Industries</h2>
+            <p>At AT Digitals, we've got your back every step of the way. We start by conducting in-depth meetings to understand your business goals and identify areas for improvement. Whether you aim to increase customers, boost revenue, reduce costs, enhance sustainability, or achieve all of these together, we're here to help.</p>
+            <p>Our team of experts will craft tailored digital strategies to meet your specific needs. We focus on aligning our solutions with your business objectives, ensuring successful implementation and tangible results. Let us help you navigate the digital landscape, overcome obstacles, and achieve your goals with confidence. Partner with AT Digitals and transform your business for the digital age.</p>
         </section>
-        <section id="services">
-            <table>
-                <tr>
-                    <th>Features</th>
-                    <th>CRM Systems</th>
-                    <th>Supply Chain Management</th>
-                    <th>Business Intelligence (BI)</th>
-                    <th>ERP Solutions</th>
-                </tr>
-                <tr>
-                    <td>Initial Consultation</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>System Integration</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Process Automation</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Data Analytics</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Custom Solutions</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>User Training</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Ongoing Support</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Security Enhancement</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Compliance Management</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Scalability Planning</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-            </table>
+        <section class="main-sections">
+            <h2>The True Drivers of Success</h2>
+            <p>We understand that while cutting-edge technology is crucial, it's the people and processes that truly drive success. Without the right mindset and understanding, technology alone won't make your business efficient or effective. That's why we offer comprehensive training both on-site and off-site, tailored to your needs. Our goal is to ensure that everyone in your business aligns with your vision and knows how to use these powerful tools effectively. With AT Digitals, you can have peace of mind knowing your team is equipped to leverage technology to its fullest potential.</p>
         </section>
-        <section class="main-sections" id="cta">
-            <h2>Begin Your Digital Transformation Journey Today</h2>
-            <p>Ready to revolutionize your business? Contact us now to discuss your digital transformation and how we can help you achieve your strategic goals.</p>
-            <a href="contact.html"><button>Get Started</button></a>
+        <section id="cta" class="main-sections">
+            <h2>Ready to Transform Your Business?</h2>
+            <a href="contact.html"><button>Contact us</button></a>
         </section>
-    </main>
+    </main>    
     <footer>
         <section>
             <nav class="footer-nav-links">
@@ -198,35 +82,35 @@
                     <h3>About</h3>
                     <ul class="footer-nav-links-design">
                         <a href="about.html"><li>Our Company</li></a>
-                        <a href=""><li>Core Team</li></a>
+                        <a href="#"><li>Core Team</li></a>
                         <a href="career.html"><li>Career</li></a>
-                        <a href=""><li>How we work</li></a>
+                        <a href="#"><li>How we work</li></a>
                     </ul>
                 </div>
                 <div>
                     <h3>Services</h3>
                     <ul class="footer-nav-links-design">
-                        <a href="crm-systems.html"><li>CRM Systems</li></a>
-                        <a href="supply-chain-management.html"><li>Supply Chain Management</li></a>
-                        <a href="business-intelligence.html"><li>Business Intelligence (BI)</li></a>
-                        <a href="erp-solutions.html"><li>ERP Solutions</li></a>
+                        <a href="ui-ux-design.html"><li>UI/UX</li></a>
+                        <a href="crm-systems.html"><li>CMS Systems</li></a>
+                        <a href="#"><li>Enterprise Web Hosting</li></a>
+                        <a href="#"><li>Property Management Systems</li></a>
                         <a href="services.html"><li>More...</li></a>
                     </ul>
                 </div>
                 <div>
                     <h3>Industries</h3>
                     <ul class="footer-nav-links-design">
-                        <a href=""><li>Hospitality</li></a>
-                        <a href=""><li>eCommerce</li></a>
-                        <a href=""><li>SaaS</li></a>
+                        <a href="#"><li>Hospitality</li></a>
+                        <a href="#"><li>eCommerce</li></a>
+                        <a href="#"><li>SaaS</li></a>
                     </ul>
                 </div>
                 <div class="footer-nav-social">
                     <h3>Social</h3>
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </nav>
         </section>
@@ -235,8 +119,8 @@
         </section>
         <section class="footer-legal">
             <p>2024 &copy; AT Digital Consultation</p>
-            <a href="">Terms & Conditions</a>
-            <a href="">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
         </section>
     </footer>
     <script src="./src/global.js"></script>

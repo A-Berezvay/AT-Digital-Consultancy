@@ -202,12 +202,16 @@ header nav{
 
 @media (max-width: 650px){
 
-    .menu-items{
-        font-size: 1.75em;
+    .menu-items a{
+        font-size: 1em;
         margin: 25px 0;
     }
 
     .menu-items button {
+        font-size: .75em;
+    }
+
+    .drop-down{
         font-size: .75em;
     }
 

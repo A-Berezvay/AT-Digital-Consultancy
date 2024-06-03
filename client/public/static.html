@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style/static.css?v=2705"> <!--CSS Stylesheet (Local)-->
-    <link rel="stylesheet" href="./src/style/global.css?v=2805"> <!--CSS Stylesheet (Global)-->
+    <link rel="stylesheet" href="./src/style/global.css?v=0306"> <!--CSS Stylesheet (Global)-->
     <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
@@ -14,49 +14,37 @@
 <body>
     <header>
         <nav>
-            <a href="./index.html"><h1>AT Digital Consultation</h1></a>
+            <a href="index.html"><h1>AT Digital Consultation</h1></a>
             <i class="nav-icons fa-solid fa-bars" id="menu-bars"></i>
             <i class="nav-icons fa-solid fa-x" id="menu-close"></i>
             <ul class="main-menu" id="mainMenu">
-                <a href="about.html" class="nav-links">
+                <a href="about.html">
                     <li class="menu-items">About</li>
-                    <i class="fa-solid fa-plus" id="about-plus-icon"></i>
                 </a>
-                <a href="#"  class="nav-links" id="servicesLink">
-                    <li class="menu-items">Services</li>
-                    <i class="fa-solid fa-minus" id="services-minus-icon"></i>
-                    <i class="fa-solid fa-plus" id="services-plus-icon"></i>
+                <a href="digital-transformation.html">
+                    <li class="menu-items">Digital Transformation</li>
                 </a>
-                <div id="servicesDropdown" class="services-dropdown">
-                        <div class="dropdown-design">
-                            <section>
-                                <a href="web-dev.html" class="service-categories">Website Development</a>
-                                <ul class="service-items">
-                                    <a href="ui-ux-design.html"><li>UI/UX</li></a>
-                                    <a href="#"><li>Static Websites</li></a>
-                                    <a href="dynamic.html"><li>Dynamic Websites</li></a>
-                                    <a href="cms-based.html"><li>CMS-based Websites</li></a>
-                                    <a href="custom-cms.html"><li>Custom CMS Solutions</li></a>
-                                </ul>
-                            </section>
-                            <section>
-                                <a href="digital-transformation.html" class="service-categories">Digital Transformation</a>
-                                <ul class="service-items">
-                                    <a href="crm-systems.html"><li>CRM Systems</li></a>
-                                    <a href="supply-chain-management.html"><li>Supply Chain Management</li></a>
-                                    <a href="business-intelligence.html"><li>Business Intelligence (BI)</li></a>
-                                    <a href="erp-solutions.html"><li>ERP Solutions</li></a>
-                                </ul>
-                            </section>
-                            <section>
-                                <a href="tech-consultation.html" class="service-categories">Tech Consultation</a>
-                                <ul class="service-items">
-                                    <a href="tech-audits.html"><li>Technology Audits</li></a>
-                                    <a href="digital-strategy.html"><li>Basic Digital Strategy</li></a>
-                                </ul>
-                            </section>
-                        </div>
-                </div>
+                <li class="menu-items" id="webDevLink">
+                    <a href="web-dev.html">Web Development</a>
+                    <ul class="drop-down" id="webDevDropdown">
+                        <li><a href="ui-ux-design.html">UI/UX</a></li>
+                        <li><a href="static.html">Static Websites</a></li>
+                        <li><a href="dynamic.html">Dynamic Websites</a></li>
+                        <li><a href="cms-based.html">CMS Systems</a></li>
+                        <li><a href="custom-cms.html">Custom CMS Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="menu-items" id="softwareSolutionsLink">
+                    <a href="#">Software Solutions</a>
+                    <ul class="drop-down" id="softwareSolutionsDropdown">
+                        <a href="enterprise-web-hosting.html"><li>Enterprise Web Hosting</li></a>
+                        <a href="enterprise-resource-planning.html"><li>Enterprise Resource Planning</li></a>
+                        <a href="online-ordering-system.html"><li>Online Ordering System</li></a>
+                        <a href="pos.html"><li>Point of Sale</li></a>
+                        <a href="property-management-system.html"><li>Property Management System</li></a>
+                        <a href="software-testing.html"><li>Software Testing</li></a>
+                    </ul>
+                </li>
                 <a href="contact.html" id="contact-button">
                     <li class="menu-items"><button>Contact us</button></li>
                 </a>
@@ -113,35 +101,35 @@
                     <h3>About</h3>
                     <ul class="footer-nav-links-design">
                         <a href="about.html"><li>Our Company</li></a>
-                        <a href=""><li>Core Team</li></a>
+                        <a href="#"><li>Core Team</li></a>
                         <a href="career.html"><li>Career</li></a>
-                        <a href=""><li>How we work</li></a>
+                        <a href="#"><li>How we work</li></a>
                     </ul>
                 </div>
                 <div>
                     <h3>Services</h3>
                     <ul class="footer-nav-links-design">
-                        <a href="crm-systems.html"><li>CRM Systems</li></a>
-                        <a href="supply-chain-management.html"><li>Supply Chain Management</li></a>
-                        <a href="business-intelligence.html"><li>Business Intelligence (BI)</li></a>
-                        <a href="erp-solutions.html"><li>ERP Solutions</li></a>
+                        <a href="ui-ux-design.html"><li>UI/UX</li></a>
+                        <a href="crm-systems.html"><li>CMS Systems</li></a>
+                        <a href="#"><li>Enterprise Web Hosting</li></a>
+                        <a href="#"><li>Property Management Systems</li></a>
                         <a href="services.html"><li>More...</li></a>
                     </ul>
                 </div>
                 <div>
                     <h3>Industries</h3>
                     <ul class="footer-nav-links-design">
-                        <a href=""><li>Hospitality</li></a>
-                        <a href=""><li>eCommerce</li></a>
-                        <a href=""><li>SaaS</li></a>
+                        <a href="#"><li>Hospitality</li></a>
+                        <a href="#"><li>eCommerce</li></a>
+                        <a href="#"><li>SaaS</li></a>
                     </ul>
                 </div>
                 <div class="footer-nav-social">
                     <h3>Social</h3>
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </nav>
         </section>
@@ -150,8 +138,8 @@
         </section>
         <section class="footer-legal">
             <p>2024 &copy; AT Digital Consultation</p>
-            <a href="">Terms & Conditions</a>
-            <a href="">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
         </section>
     </footer>
     <script src="./src/global.js"></script>
