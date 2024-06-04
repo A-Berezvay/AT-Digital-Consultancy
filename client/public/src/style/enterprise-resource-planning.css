@@ -1,0 +1,29 @@
+:root {
+    --deep-blue: #111C26;
+    --slate-gray: #61788C;
+    --sand: #D9D1B8;
+    --soft-red: #BF8C80;
+    --off-white: #F2F2F2;
+}
+
+.main-sections li{
+    color: var(--off-white);
+    line-height: 2em;
+}
+
+.main-sections p{
+    margin: 20px 0;
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
