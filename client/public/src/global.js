@@ -1,7 +1,6 @@
 /* === HEADER === */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('header');
     const menuIcon = document.getElementById('menu-bars');
     const menuCloseIcon = document.getElementById('menu-close');
     const mainMenu = document.getElementById('mainMenu');
@@ -12,8 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const webDevDropdown = document.getElementById('webDevDropdown');
     const softwareSolutionsDropdown = document.getElementById('softwareSolutionsDropdown');
 
+    // Initial state
+    menuIcon.style.display = 'none';
+    menuCloseIcon.style.display = 'none';
+
     // Functions to toggle the main menu
     function toggleMenu(open) {
+        console.log(`toggleMenu called with open: ${open}`);
         if (open) {
             mainMenu.style.display = 'flex';
             menuCloseIcon.style.display = 'block';
@@ -40,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to toggle dropdown menus
     function toggleDropdown(dropdown) {
+        console.log(`toggleDropdown called on: ${dropdown.id}`);
         if (dropdown.style.display === 'none' || dropdown.style.display === '') {
             dropdown.style.display = 'block';
             console.log("Dropdown opened:", dropdown);
@@ -49,34 +54,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Add event listeners to the dropdown items to handle clicks
+    const webDevDropdownItems = webDevDropdown.querySelectorAll('a');
+    webDevDropdownItems.forEach(item => {
+        item.addEventListener('click', (event) => {
+            event.stopPropagation(); // Stop the event from bubbling up the DOM tree
+            console.log("Dropdown item clicked:", event.target);
+            // Redirect to the respective page
+            window.location.href = event.target.href;
+        });
+    });
+
+    const softwareSolutionsDropdownItems = softwareSolutionsDropdown.querySelectorAll('a');
+    softwareSolutionsDropdownItems.forEach(item => {
+        item.addEventListener('click', (event) => {
+            event.stopPropagation(); // Stop the event from bubbling up the DOM tree
+            console.log("Dropdown item clicked:", event.target);
+            // Redirect to the respective page
+            window.location.href = event.target.href;
+        });
+    });
+
     // Functions to show and hide dropdowns on hover
     function showDropdown(dropdown) {
-        //clearTimeout(hideDropdownTimeout);
         dropdown.style.display = 'block';
         console.log("Dropdown shown:", dropdown);
     }
     
     function hideDropdown(dropdown) {
-        //hideDropdownTimeout = setTimeout(() => {
             dropdown.style.display = 'none';
             console.log("Dropdown hidden:", dropdown);
-        //}, 200);
     }
 
     // Update event listeners based on screen size
     function updateEventListeners() {
         const isMobile = window.matchMedia('(max-width: 1280px)').matches;
 
-        // Debugging logs
-        console.log("isMobile:", isMobile);
-        console.log("webDevLink:", webDevLink);
-        console.log("softwareSolutionsLink:", softwareSolutionsLink);
-
         if (webDevLink && softwareSolutionsLink) {
             if (isMobile) {
+                //Initial menu state
+                menuIcon.style.display = 'block';
                 // Disable the links
-                webDevLink.addEventListener('click', disableLink);
-                softwareSolutionsLink.addEventListener('click', disableLink);
+                webDevLink.addEventListener('click', (event) => disableLink(event, webDevDropdown));
+                softwareSolutionsLink.addEventListener('click', (event) => disableLink(event, softwareSolutionsDropdown));
                 webDevLink.addEventListener('click', () => toggleDropdown(webDevDropdown));
                 softwareSolutionsLink.addEventListener('click', () => toggleDropdown(softwareSolutionsDropdown));
                 console.log("Event listeners added to disable links and toggle dropdowns for mobile view");
@@ -92,10 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 softwareSolutionsDropdown.removeEventListener('mouseleave', hideDropdownHandler);
             } else {
                 // Re-enable the links (remove the event listener)
-                webDevLink.removeEventListener('click', disableLink);
-                softwareSolutionsLink.removeEventListener('click', disableLink);
-                webDevLink.removeEventListener('click', () => toggleDropdown(webDevDropdown));
-                softwareSolutionsLink.removeEventListener('click', () => toggleDropdown(softwareSolutionsDropdown));
+                webDevLink.removeEventListener('click', (event) => disableLinkAndToggleDropdown(event, webDevDropdown));
+                softwareSolutionsLink.removeEventListener('click', (event) => disableLinkAndToggleDropdown(event, softwareSolutionsDropdown));
                 webDevDropdown.style.display = 'none';
                 softwareSolutionsDropdown.style.display = 'none';
                 console.log("Event listeners removed for desktop view");
@@ -139,8 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateEventListeners);
 
 });
-
-
 
 /* === CONTACT FORM === */
 
