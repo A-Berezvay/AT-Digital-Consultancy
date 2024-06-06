@@ -11,45 +11,117 @@
     <title>About AT Digital Consultation | Software Development & Digital Transformation Agency</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html"><h1>AT Digital Consultation</h1></a>
-            <i class="nav-icons fa-solid fa-bars" id="menu-bars"></i>
-            <i class="nav-icons fa-solid fa-x" id="menu-close"></i>
-            <ul class="main-menu" id="mainMenu">
-                <a href="about.html">
-                    <li class="menu-items">About</li>
-                </a>
-                <a href="digital-transformation.html">
-                    <li class="menu-items">Digital Transformation</li>
-                </a>
-                <li class="menu-items" id="webDevLink">
-                    <a href="web-dev.html">Web Development</a>
-                    <ul class="drop-down" id="webDevDropdown">
-                        <li><a href="ui-ux-design.html">UI/UX</a></li>
-                        <li><a href="static.html">Static Websites</a></li>
-                        <li><a href="dynamic.html">Dynamic Websites</a></li>
-                        <li><a href="cms-based.html">CMS Systems</a></li>
-                        <li><a href="custom-cms.html">Custom CMS Solutions</a></li>
+    <header class="header">
+        <nav class="nav container">
+           <div class="nav__data">
+              <a href="#" class="nav__logo">
+                  <h1>AT Digital Consultation</h1>
+              </a>
+              
+              <div class="nav__toggle" id="nav-toggle">
+                 <i class="fa-solid fa-bars nav__burger"></i>
+                 <i class="fa-solid fa-x nav__close"></i>
+              </div>
+           </div>
+
+           <!--=============== NAV MENU ===============-->
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li><a href="about.html" class="nav__link">About</a></li>
+
+                 <li><a href="digital-transformation.html" class="nav__link">Digital Transformation</a></li>
+
+                 <!--=============== DROPDOWN 1 ===============-->
+                 <li class="dropdown__item">
+                    <div class="nav__link">
+                       Web Development <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu">
+                       <li>
+                          <a href="ui-ux-design.html" class="dropdown__link">
+                               UI/UX 
+                          </a>                          
+                       </li>
+
+                       <li>
+                          <a href="static.html" class="dropdown__link">
+                               Static Websites
+                          </a>
+                       </li>
+
+                       <li>
+                           <a href="dynamic.html" class="dropdown__link">
+                               Dynamic Websites
+                           </a>
+                       </li>
+
+                       <li>
+                           <a href="cms-based.html" class="dropdown__link">
+                               CMS Systems
+                           </a>
+                       </li>
+
+                       <li>
+                           <a href="custom-cms.html" class="dropdown__link">
+                               Custom CMS Solutions
+                           </a>
+                       </li>
+
                     </ul>
-                </li>
-                <li class="menu-items" id="softwareSolutionsLink">
-                    <a href="#">Software Solutions</a>
-                    <ul class="drop-down" id="softwareSolutionsDropdown">
-                        <a href="enterprise-web-hosting.html"><li>Enterprise Web Hosting</li></a>
-                        <a href="enterprise-resource-planning.html"><li>Enterprise Resource Planning</li></a>
-                        <a href="online-ordering-system.html"><li>Online Ordering System</li></a>
-                        <a href="pos.html"><li>Point of Sale</li></a>
-                        <a href="property-management-system.html"><li>Property Management System</li></a>
-                        <a href="software-testing.html"><li>Software Testing</li></a>
+                 </li>
+                 
+
+                 <!--=============== DROPDOWN 2 ===============-->
+                 <li class="dropdown__item">
+                    <div class="nav__link">
+                       Software Solutions <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu">
+                       <li>
+                          <a href="enterprise-web-hosting.html" class="dropdown__link">
+                             Enterprise Web Hosting
+                          </a>                          
+                       </li>
+
+                       <li>
+                          <a href="enterprise-resource-planning.html" class="dropdown__link">
+                             Enterprise Resource Management
+                          </a>
+                       </li>
+
+                       <li>
+                          <a href="online-ordering-system.html" class="dropdown__link">
+                             Online Ordering System
+                          </a>
+                       </li>
+
+                       <li>
+                           <a href="pos.html" class="dropdown__link">
+                              Point of Sale
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="property-management-system.html" class="dropdown__link">
+                              Property Management System
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="software-testing.html" class="dropdown__link">
+                              Software Testing
+                           </a>
+                        </li>
                     </ul>
-                </li>
-                <a href="contact.html" id="contact-button">
-                    <li class="menu-items"><button>Contact us</button></li>
-                </a>
-            </ul>
+                 </li>
+
+                 <a href="contact.html" class="nav__link"><button>Contact</button></a>
+              </ul>
+           </div>
         </nav>
-    </header>
+     </header>
     <main>
         <section id="hero">
             <img src="./src/assets/Images/office-team.jpg" alt="">
