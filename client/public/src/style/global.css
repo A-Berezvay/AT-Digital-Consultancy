@@ -184,7 +184,7 @@ p, a {
     }
     .nav__list {
       background-color: var(--black-color);
-      padding-top: 1rem;
+      padding: 0;
     }
   }
   
@@ -239,14 +239,7 @@ p, a {
     display: flex;
     align-items: center;
     column-gap: .5rem;
-    font-weight: var(--font-semi-bold);
     transition: background-color .3s;
-  }
-  
-  .dropdown__link i, 
-  .dropdown__sublink i {
-    font-size: 1.25rem;
-    font-weight: initial;
   }
   
   .dropdown__link:hover, 

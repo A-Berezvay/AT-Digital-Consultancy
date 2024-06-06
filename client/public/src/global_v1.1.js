@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
     showMenu('nav-toggle', 'nav-menu');
 });
 
@@ -6,15 +7,28 @@ const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
           nav = document.getElementById(navId);
 
-    if(toggle && nav) {  // Check if elements exist
-        toggle.addEventListener('click', () => {
+
+          console.log('showMenu function called');
+          console.log('toggle element:', toggle);
+          console.log('nav element:', nav);
+
+    if (toggle && nav) {  // Check if elements exist
+        const toggleMenu = () => {
+            event.preventDefault()
+            console.log('Prevent default')
             // Add show-menu class to nav menu
             nav.classList.toggle('show-menu');
-            console.log('Menu show');
+            console.log('toggle showMenu enabled');
             // Add show-icon to show and hide the menu icon
             toggle.classList.toggle('show-icon');
-            console.log('Icon show');
-        });
+            console.log('toggle icon enabled');
+        };
+
+        // Add both click and touchstart event listeners
+        toggle.addEventListener('click', toggleMenu);
+        console.log('Click, toggle menu Event Listener');
+        toggle.addEventListener('touchstart', toggleMenu);
+        console.log('touchstart toggle menu Event Listener');
     }
 };
 
