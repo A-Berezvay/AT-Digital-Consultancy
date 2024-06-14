@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style/index.css?v=2705"> <!--CSS Stylesheet (Local)-->
-    <link rel="stylesheet" href="./src/style/global.css?v=0606:1020"> <!--CSS Stylesheet (Global)-->
+    <link rel="stylesheet" href="./src/style/global.css?v=1406:2301"> <!--CSS Stylesheet (Global)-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet"> <!--Google Fonts-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"> <!--Header Icons-->
     <title>AT Digital Consultation | Software Development & Digital Transformation Agency</title>
 </head>
 <body>
-      <header class="header">
+    <header class="header">
          <nav class="nav container">
             <div class="nav__data">
                <a href="#" class="nav__logo">
@@ -20,8 +19,8 @@
                </a>
                
                <div class="nav__toggle" id="nav-toggle">
-                  <i class="fa-solid fa-bars nav__burger"></i>
-                  <i class="fa-solid fa-x nav__close"></i>
+                  <i class="fa-solid fa-bars nav__burger" id="navBurger"></i>
+                  <i class="fa-solid fa-x nav__close" id="navClose"></i>
                </div>
             </div>
 
@@ -33,12 +32,12 @@
                   <li><a href="digital-transformation.html" class="nav__link">Digital Transformation</a></li>
 
                   <!--=============== DROPDOWN 1 ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
+                  <li class="dropdown__item" id="webdev-dropdown">
+                     <div class="nav__link" id="webdev-navlink">
                         Web Development <i class="fa-solid fa-caret-down dropdown__arrow"></i>
                      </div>
 
-                     <ul class="dropdown__menu">
+                     <ul class="dropdown__menu" id="dropdown-display-webdev">
                         <li>
                            <a href="ui-ux-design.html" class="dropdown__link">
                                 UI/UX 
@@ -75,11 +74,11 @@
 
                   <!--=============== DROPDOWN 2 ===============-->
                   <li class="dropdown__item">
-                     <div class="nav__link">
+                     <div class="nav__link" id="software-navlink">
                         Software Solutions <i class="fa-solid fa-caret-down dropdown__arrow"></i>
                      </div>
 
-                     <ul class="dropdown__menu">
+                     <ul class="dropdown__menu" id="dropdown-display-software">
                         <li>
                            <a href="enterprise-web-hosting.html" class="dropdown__link">
                               Enterprise Web Hosting
@@ -122,7 +121,7 @@
                </ul>
             </div>
          </nav>
-      </header>
+    </header>
     <main>
         <section id="hero">
             <img src="./src/assets/Images/hero-img.jpg" alt="">

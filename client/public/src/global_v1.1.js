@@ -1,36 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
-    showMenu('nav-toggle', 'nav-menu');
+
+    const navToggle = document.getElementById('nav-toggle');
+    const menuIcon = document.getElementById('navBurger');
+    const menuCloseIcon = document.getElementById('navClose');
+    const navMenu = document.getElementById('nav-menu');
+    const webDevNavLink = document.getElementById('webdev-navlink');
+    const softwareNavLink = document.getElementById('software-navlink');
+    const dropdownMenuWebDev = document.getElementById('dropdown-display-webdev');
+    const dropdownMenuSoftware = document.getElementById('dropdown-display-software');
+
+    console.log("Elements:", { menuIcon, menuCloseIcon, navMenu, navToggle, webDevNavLink, softwareNavLink, dropdownMenuWebDev, dropdownMenuSoftware });
+
+    menuCloseIcon.style.display = 'none'; // Initial display of Close icon
+
+    function toggleMenu() {
+        if (navMenu.classList.contains('show-menu')) {
+            navMenu.classList.remove('show-menu');
+            menuCloseIcon.style.display = 'none';
+            menuIcon.style.display = 'block';
+            console.log('Close Icon clicked');
+        } else {
+            navMenu.classList.add('show-menu');
+            menuCloseIcon.style.display = 'block';
+            menuIcon.style.display = 'none';
+            console.log('Menu Icon clicked');
+        }
+    }
+
+    navToggle.addEventListener('click', toggleMenu);
+
+    function setInitialDropdownDisplay() {
+        if (window.innerWidth < 1118) {
+            dropdownMenuWebDev.style.display = 'none';
+            dropdownMenuSoftware.style.display = 'none';
+        } else {
+            dropdownMenuWebDev.style.display = 'block';
+            dropdownMenuSoftware.style.display = 'block';
+        }
+    }
+
+    setInitialDropdownDisplay();
+    window.addEventListener('resize', setInitialDropdownDisplay);
+
+    function toggleDropdown(dropdownMenu) {
+        if (dropdownMenu.style.display === 'none') {
+            dropdownMenu.style.display = 'block';
+        } else {
+            dropdownMenu.style.display = 'none';
+        }
+    }
+
+    webDevNavLink.addEventListener('click', () => toggleDropdown(dropdownMenuWebDev));
+    softwareNavLink.addEventListener('click', () => toggleDropdown(dropdownMenuSoftware));
+
+
 });
 
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-          nav = document.getElementById(navId);
-
-
-          console.log('showMenu function called');
-          console.log('toggle element:', toggle);
-          console.log('nav element:', nav);
-
-    if (toggle && nav) {  // Check if elements exist
-        const toggleMenu = () => {
-            event.preventDefault()
-            console.log('Prevent default')
-            // Add show-menu class to nav menu
-            nav.classList.toggle('show-menu');
-            console.log('toggle showMenu enabled');
-            // Add show-icon to show and hide the menu icon
-            toggle.classList.toggle('show-icon');
-            console.log('toggle icon enabled');
-        };
-
-        // Add both click and touchstart event listeners
-        toggle.addEventListener('click', toggleMenu);
-        console.log('Click, toggle menu Event Listener');
-        toggle.addEventListener('touchstart', toggleMenu);
-        console.log('touchstart toggle menu Event Listener');
-    }
-};
 
 
 /* === CONTACT FORM === */
