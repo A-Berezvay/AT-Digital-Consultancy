@@ -94,7 +94,7 @@ p, a {
   
   /*=============== REUSABLE CSS CLASSES ===============*/
   .container {
-    max-width: 1120px;
+    padding: 0 5%;
     margin-inline: 1.5rem;
   }
   
@@ -257,7 +257,6 @@ p, a {
     overflow: hidden;
     transition: max-height .4s ease-out;
     padding: 0;
-    width: 100%;
   }
   
   /* Show dropdown menu & submenu */
@@ -472,11 +471,7 @@ button{
   margin: 0 auto;
 }
 
-@media (max-width:600px){
-  main{
-      padding: 90px 0;
-  }
-}
+
 
 /* === FOOTER === */
 

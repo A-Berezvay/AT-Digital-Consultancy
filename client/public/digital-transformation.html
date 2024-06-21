@@ -20,8 +20,8 @@
               </a>
               
               <div class="nav__toggle" id="nav-toggle">
-                 <i class="fa-solid fa-bars nav__burger"></i>
-                 <i class="fa-solid fa-x nav__close"></i>
+                 <i class="fa-solid fa-bars nav__burger" id="navBurger"></i>
+                 <i class="fa-solid fa-x nav__close" id="navClose"></i>
               </div>
            </div>
 
@@ -30,15 +30,15 @@
               <ul class="nav__list">
                  <li><a href="about.html" class="nav__link">About</a></li>
 
-                 <li><a href="digital-transformation.html" class="nav__link">Digital Transformation</a></li>
+                 <li><a href="#" class="nav__link">Digital Transformation</a></li>
 
                  <!--=============== DROPDOWN 1 ===============-->
-                 <li class="dropdown__item">
-                    <div class="nav__link">
+                 <li class="dropdown__item" id="webdev-dropdown">
+                    <div class="nav__link" id="webdev-navlink">
                        Web Development <i class="fa-solid fa-caret-down dropdown__arrow"></i>
                     </div>
 
-                    <ul class="dropdown__menu">
+                    <ul class="dropdown__menu" id="dropdown-display-webdev">
                        <li>
                           <a href="ui-ux-design.html" class="dropdown__link">
                                UI/UX 
@@ -75,11 +75,11 @@
 
                  <!--=============== DROPDOWN 2 ===============-->
                  <li class="dropdown__item">
-                    <div class="nav__link">
+                    <div class="nav__link" id="software-navlink">
                        Software Solutions <i class="fa-solid fa-caret-down dropdown__arrow"></i>
                     </div>
 
-                    <ul class="dropdown__menu">
+                    <ul class="dropdown__menu" id="dropdown-display-software">
                        <li>
                           <a href="enterprise-web-hosting.html" class="dropdown__link">
                              Enterprise Web Hosting
@@ -122,7 +122,7 @@
               </ul>
            </div>
         </nav>
-     </header>
+   </header>
     <main>
         <section id="hero" class="main-sections">
             <h1>Design, Implementation, Support</h1>

@@ -117,6 +117,34 @@
                      </ul>
                   </li>
 
+                  <!--=============== DROPDOWN 3 ===============-->
+                  <li class="dropdown__item">
+                    <div class="nav__link" id="marketing-navlink">
+                       Marketing <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu" id="dropdown-display-marketing">
+                       <li>
+                          <a href="#" class="dropdown__link">
+                             Content Creation
+                          </a>                          
+                       </li>
+
+                       <li>
+                          <a href="#" class="dropdown__link">
+                             Email Marketing
+                          </a>
+                       </li>
+
+                       <li>
+                           <a href="#" class="dropdown__link">
+                              Social Media Strategy
+                           </a>
+                        </li>
+
+                    </ul>
+                 </li>                  
+
                   <a href="contact.html" class="nav__link"><button>Contact</button></a>
                </ul>
             </div>
@@ -164,7 +192,7 @@
             <section id="contact-form-section">
                 <h1>Contact Us</h1>
                 <p>Please fill in the form below to send us your inquiries. Whether you need more information about our services or have specific project requirements, we're here to help!</p>
-                <form action="" method="POST" enctype="multipart/form-data" name="contact-form">
+                <form action="contact_form_handler.php" method="POST" enctype="multipart/form-data" name="contact-form">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
