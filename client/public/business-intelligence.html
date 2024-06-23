@@ -15,13 +15,13 @@
     <header class="header">
         <nav class="nav container">
            <div class="nav__data">
-              <a href="#" class="nav__logo">
+              <a href="index.html" class="nav__logo">
                   <h1>AT Digital Consultation</h1>
               </a>
               
               <div class="nav__toggle" id="nav-toggle">
-                 <i class="fa-solid fa-bars nav__burger"></i>
-                 <i class="fa-solid fa-x nav__close"></i>
+                 <i class="fa-solid fa-bars nav__burger" id="navBurger"></i>
+                 <i class="fa-solid fa-x nav__close" id="navClose"></i>
               </div>
            </div>
 
@@ -33,12 +33,12 @@
                  <li><a href="digital-transformation.html" class="nav__link">Digital Transformation</a></li>
 
                  <!--=============== DROPDOWN 1 ===============-->
-                 <li class="dropdown__item">
-                    <div class="nav__link">
+                 <li class="dropdown__item" id="webdev-dropdown">
+                    <div class="nav__link" id="webdev-navlink">
                        Web Development <i class="fa-solid fa-caret-down dropdown__arrow"></i>
                     </div>
 
-                    <ul class="dropdown__menu">
+                    <ul class="dropdown__menu" id="dropdown-display-webdev">
                        <li>
                           <a href="ui-ux-design.html" class="dropdown__link">
                                UI/UX 
@@ -75,11 +75,11 @@
 
                  <!--=============== DROPDOWN 2 ===============-->
                  <li class="dropdown__item">
-                    <div class="nav__link">
+                    <div class="nav__link" id="software-navlink">
                        Software Solutions <i class="fa-solid fa-caret-down dropdown__arrow"></i>
                     </div>
 
-                    <ul class="dropdown__menu">
+                    <ul class="dropdown__menu" id="dropdown-display-software">
                        <li>
                           <a href="enterprise-web-hosting.html" class="dropdown__link">
                              Enterprise Web Hosting
@@ -118,11 +118,39 @@
                     </ul>
                  </li>
 
+                 <!--=============== DROPDOWN 3 ===============-->
+                 <li class="dropdown__item">
+                   <div class="nav__link" id="marketing-navlink">
+                      Marketing <i class="fa-solid fa-caret-down dropdown__arrow"></i>
+                   </div>
+
+                   <ul class="dropdown__menu" id="dropdown-display-marketing">
+                      <li>
+                         <a href="#" class="dropdown__link">
+                            Content Creation
+                         </a>                          
+                      </li>
+
+                      <li>
+                         <a href="#" class="dropdown__link">
+                            Email Marketing
+                         </a>
+                      </li>
+
+                      <li>
+                          <a href="#" class="dropdown__link">
+                             Social Media Strategy
+                          </a>
+                       </li>
+
+                   </ul>
+                </li>                  
+
                  <a href="contact.html" class="nav__link"><button>Contact</button></a>
               </ul>
            </div>
         </nav>
-    </header>
+   </header>
     <main>
         <section class="main-sections" id="hero">
             <h1>Unlock Data-Driven Insights with Business Intelligence</h1>
