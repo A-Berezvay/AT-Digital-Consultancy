@@ -419,6 +419,42 @@ p, a {
     }
 }
 
+/* === PACKAGES DESIGN === */
+
+.packages{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.package-display{
+  border-radius: 5px;
+  padding: 50px 30px;
+  margin: 50px 0;
+  width: 50%;
+  background: linear-gradient(135deg, var(--slate-gray) 0%, var(--deep-blue) 100%);
+}
+
+.package-display p{
+  margin: 40px 0;
+  font-size: 1.5rem;
+}
+
+.package-display li{
+  color: var(--off-white);
+}
+
+@media (max-width: 400px){
+  .package-display{
+    width: 90%;
+  }
+
+  .package-display p{
+    font-size: 1rem;
+  }
+}
+
 /* === CTA === */
 
 #cta{
