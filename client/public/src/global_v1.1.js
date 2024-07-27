@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
 
+    /* === HEADER FUNCTIONALITIES AND LOGIC */
+
     const navToggle = document.getElementById('nav-toggle');
     const menuIcon = document.getElementById('navBurger');
     const menuCloseIcon = document.getElementById('navClose');
@@ -16,6 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuCloseIcon.style.display = 'none'; // Initial display of Close icon
 
+    /*
+    A function that toggles the "show-menu" class in CSS. 
+    Anytime the Burger icon is being clicked the Menu appear and the
+    Icon changes from Burger to Close Icon
+    */
     function toggleMenu() {
         if (navMenu.classList.contains('show-menu')) {
             navMenu.classList.remove('show-menu');
@@ -30,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    navToggle.addEventListener('click', toggleMenu);
+    navToggle.addEventListener('click', toggleMenu); //Calling the function to excecute on click event.
 
     function setInitialDropdownDisplay() {
         if (window.innerWidth < 1118) {
@@ -44,37 +51,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+
     setInitialDropdownDisplay();
     window.addEventListener('resize', setInitialDropdownDisplay);
-
+  
+    // A function that displays the drop down menus
     function toggleDropdown(dropdownMenu) {
-        if (dropdownMenu.style.display === 'none') {
-            dropdownMenu.style.display = 'block';
-        } else {
-            dropdownMenu.style.display = 'none';
-        }
+        if (window.innerWidth < 1118) {
+            if (dropdownMenu.style.display === 'none') {
+                dropdownMenu.style.display = 'block';
+                console.log('Dropdown menu open');
+            } else {
+                dropdownMenu.style.display = 'none';
+                console.log('Dropdown menu closed');
+            }
+        } 
     }
 
     webDevNavLink.addEventListener('click', () => toggleDropdown(dropdownMenuWebDev));
     softwareNavLink.addEventListener('click', () => toggleDropdown(dropdownMenuSoftware));
     marketingNavLink.addEventListener('click', () => toggleDropdown(dropdownMenuMarketing));
 
-
 });
-
-
-
-/* === CONTACT FORM === 
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwQO0F6wiLj5AnOp8Ka1z2q9dI1zqwukCrhENTVXKOF3zTSxBVTLiqJ7Gp33hbuI7R0aA/exec'
-const form = document.forms['contact-form']
-
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => alert("Thank you! Your message is submitted succesfully." ))
-    .then(() => { window.location.reload(); })
-    .catch(error => console.error('Error!', error.message))
-})
-
-*/
