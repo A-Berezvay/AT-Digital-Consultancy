@@ -1,76 +1,101 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
 
-    /* === HEADER FUNCTIONALITIES AND LOGIC */
+    /* === HEADER NAVIGATION === */
 
-    const navToggle = document.getElementById('nav-toggle');
-    const menuIcon = document.getElementById('navBurger');
-    const menuCloseIcon = document.getElementById('navClose');
-    const navMenu = document.getElementById('nav-menu');
-    const webDevNavLink = document.getElementById('webdev-navlink');
-    const softwareNavLink = document.getElementById('software-navlink');
-    const marketingNavLink = document.getElementById('marketing-navlink');
-    const dropdownMenuWebDev = document.getElementById('dropdown-display-webdev');
-    const dropdownMenuSoftware = document.getElementById('dropdown-display-software');
-    const dropdownMenuMarketing = document.getElementById('dropdown-display-marketing');
+    const serviceBtn = document.getElementById('servicesLink');
+    const dropdownMenu = document.getElementById('servicesDropdown');
 
-    console.log("Elements:", { menuIcon, menuCloseIcon, navMenu, navToggle, webDevNavLink, softwareNavLink, dropdownMenuWebDev, dropdownMenuSoftware, dropdownMenuMarketing });
 
-    menuCloseIcon.style.display = 'none'; // Initial display of Close icon
+    function showDropdown() {
+        dropdownMenu.style.display = 'block';
+    }
 
-    /*
-    A function that toggles the "show-menu" class in CSS. 
-    Anytime the Burger icon is being clicked the Menu appear and the
-    Icon changes from Burger to Close Icon
-    */
-    function toggleMenu() {
-        if (navMenu.classList.contains('show-menu')) {
-            navMenu.classList.remove('show-menu');
-            menuCloseIcon.style.display = 'none';
-            menuIcon.style.display = 'block';
-            console.log('Close Icon clicked');
+    function hideDropdown() {
+        dropdownMenu.style.display = 'none';
+    }
+
+    serviceBtn.addEventListener('mouseenter', showDropdown);
+
+    dropdownMenu.addEventListener('mouseenter', showDropdown);
+
+    serviceBtn.addEventListener('mouseleave', hideDropdown);
+    dropdownMenu.addEventListener('mouseleave', hideDropdown);
+
+    //RESPONSIVE NAVIGATION
+
+    const servicesPlusIcon = document.getElementById('services-plus-icon');
+    const servicesMinusIcon = document.getElementById('services-minus-icon');
+    const aboutPlusIcon = document.getElementById('about-plus-icon');
+    const digitalTransformationPlusIcon = document.getElementById('digital-transformation-plus-icon');
+
+    servicesMinusIcon.style.display = 'none';
+
+    function updateEventListeners() {
+        const isMobile = window.matchMedia('(max-width: 1280px)').matches;
+
+        if (isMobile) {
+            serviceBtn.removeEventListener('mouseenter', showDropdown);
+            serviceBtn.removeEventListener('mouseleave', hideDropdown);
+            dropdownMenu.removeEventListener('mouseenter', showDropdown);
+            dropdownMenu.removeEventListener('mouseleave', hideDropdown);
+
+            dropdownMenu.style.display = 'none';
+
+            serviceBtn.addEventListener('click', function() {
+                if (dropdownMenu.style.display === 'none') {
+                    dropdownMenu.style.display = 'block';
+                    servicesPlusIcon.style.display = 'none';
+                    servicesMinusIcon.style.display = 'block';
+                } else {
+                    dropdownMenu.style.display = 'none';
+                    servicesPlusIcon.style.display = 'block';
+                    servicesMinusIcon.style.display = 'none';
+                }
+            });
+
         } else {
-            navMenu.classList.add('show-menu');
+            serviceBtn.onclick = null;
+            servicesPlusIcon.style.display = 'none';
+            aboutPlusIcon.style.display = 'none';
+            digitalTransformationPlusIcon.style.display = 'none';
+
+            serviceBtn.addEventListener('mouseenter', showDropdown);
+            serviceBtn.addEventListener('mouseleave', hideDropdown);
+            dropdownMenu.addEventListener('mouseenter', showDropdown);
+            dropdownMenu.addEventListener('mouseleave', hideDropdown);
+        }
+    }
+
+    updateEventListeners();
+
+    window.addEventListener('resize', updateEventListeners);
+
+    const menuIcon = document.getElementById('menu-bars');
+    const menuCloseIcon = document.getElementById('menu-close');
+    const mainMenu = document.getElementById('mainMenu');
+    let isMenuOpen = false;
+
+    if (window.matchMedia('(max-width: 1280px)').matches) {
+        // Code to execute when the viewport width is less than or equal to 1280 pixels
+        console.log("The screen is under 1280px wide.");
+        menuIcon.addEventListener('click', function() {
+            mainMenu.style.display = 'block';
             menuCloseIcon.style.display = 'block';
             menuIcon.style.display = 'none';
-            console.log('Menu Icon clicked');
-        }
+        });
+
+
+        menuCloseIcon.addEventListener('click', function() {
+        mainMenu.style.display = 'none';
+        menuIcon.style.display = 'block';
+        menuCloseIcon.style.display = 'none';
+        });
+    } else {
+        // Code to execute when the viewport width is greater than 1280 pixels
+        menuCloseIcon.style.display = 'none';
+        menuIcon.style.display = 'none';
+
+        console.log("The screen is wider than 1280px.");
     }
-
-    navToggle.addEventListener('click', toggleMenu); //Calling the function to excecute on click event.
-
-    function setInitialDropdownDisplay() {
-        if (window.innerWidth < 1118) {
-            dropdownMenuWebDev.style.display = 'none';
-            dropdownMenuSoftware.style.display = 'none';
-            dropdownMenuMarketing.style.display = 'none';
-        } else {
-            dropdownMenuWebDev.style.display = 'block';
-            dropdownMenuSoftware.style.display = 'block';
-            dropdownMenuMarketing.style.display = 'block';
-        }
-    }
-
-
-
-    setInitialDropdownDisplay();
-    window.addEventListener('resize', setInitialDropdownDisplay);
-  
-    // A function that displays the drop down menus
-    function toggleDropdown(dropdownMenu) {
-        if (window.innerWidth < 1118) {
-            if (dropdownMenu.style.display === 'none') {
-                dropdownMenu.style.display = 'block';
-                console.log('Dropdown menu open');
-            } else {
-                dropdownMenu.style.display = 'none';
-                console.log('Dropdown menu closed');
-            }
-        } 
-    }
-
-    webDevNavLink.addEventListener('click', () => toggleDropdown(dropdownMenuWebDev));
-    softwareNavLink.addEventListener('click', () => toggleDropdown(dropdownMenuSoftware));
-    marketingNavLink.addEventListener('click', () => toggleDropdown(dropdownMenuMarketing));
-
 });
