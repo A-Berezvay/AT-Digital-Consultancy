@@ -1,6 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
 
+    /* === SCROLLING EFFECT === */
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    
+    const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
+    hiddenElementsLeft.forEach((el) => observer.observe(el));
+
+    const hiddenElementsRight = document.querySelectorAll('.hidden-right');
+    hiddenElementsRight.forEach((el) => observer.observe(el));
+
+    const hiddenElementsBottom = document.querySelectorAll('.hidden-bottom');
+    hiddenElementsBottom.forEach((el) => observer.observe(el));
+
     /* === HEADER NAVIGATION === */
 
     const serviceBtn = document.getElementById('servicesLink');
