@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--NO CACHING META LINKS-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!--STYLESHEETS, FONTS, ICONS-->
     <link rel="stylesheet" href="./src/style/index.css?v=2705"> <!--CSS Stylesheet (Local)-->
     <link rel="stylesheet" href="./src/style/global.css?v=1008:1320"> <!--CSS Stylesheet (Global)-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
@@ -149,6 +154,7 @@
                             <option value="" disabled selected>Select a service</option>
                             <option value="web-development">Web Development</option>
                             <option value="marketing">Marketing</option>
+                            <option value="software-solutions">Software Solutions</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -163,10 +169,6 @@
                     <div class="form-group">
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="file">Attach a file:</label>
-                        <input type="file" id="file" name="file">
                     </div>
                     <button type="submit">Send Message</button>
                 </form>
@@ -198,9 +200,9 @@
                 <div>
                     <h3>Industries</h3>
                     <ul class="footer-nav-links-design">
-                        <a href="#"><li>Hospitality</li></a>
-                        <a href="#"><li>eCommerce</li></a>
-                        <a href="#"><li>SaaS</li></a>
+                        <p><li>Hospitality</li></p>
+                        <p><li>Retail</li></p>
+                        <p><li>IT</li></p>
                     </ul>
                 </div>
                 <div class="footer-nav-social">
