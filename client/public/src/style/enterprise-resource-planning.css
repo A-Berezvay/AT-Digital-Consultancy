@@ -37,5 +37,16 @@ h2{
     border: 0;
 }
 
+#cta{
+    font-size: 1.75em;
+}
+
+#cta a{
+    color: var(--soft-red);
+}
+
+#cta a:hover{
+    text-decoration: underline;
+}
 
 
