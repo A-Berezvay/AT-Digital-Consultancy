@@ -1,0 +1,148 @@
+/* SCROLLING EFFECT */ 
+
+.process-items:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.process-items:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.process-items:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.process-items:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.process-items:nth-child(6) {
+    transition-delay: 1000ms;
+}
+
+@media (prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
+
+@media (max-width: 1280px){
+    .process-items:nth-child(2) {
+        transition-delay: 200ms;
+    }
+    
+    .process-items:nth-child(3) {
+        transition-delay: 200ms;
+    }
+    
+    .process-items:nth-child(4) {
+        transition-delay: 200ms;
+    }
+    
+    .process-items:nth-child(5) {
+        transition-delay: 200ms;
+    }
+
+    .process-items:nth-child(6) {
+        transition-delay: 200ms;
+    }
+}
+
+/* === ADVANTAGES === */
+
+#advantages{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.advantage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.advantage i{
+    color: var(--off-white);
+    font-size: 2em;
+}
+
+.advantage p {
+    font-size: 1.25em;
+}
+
+@media (max-width:1200px){
+    .advantage{
+        padding: 20px 10px;
+    }
+} 
+
+@media (max-width: 700px){
+    #advantages{
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
+
+/* === THE PROCESS === */
+
+#process{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  
+    padding: 0 50px;
+    height: 80vh;
+  }
+  
+  .process-display{
+      display: flex;
+      justify-content: space-around;
+  }
+  
+  .process-items{
+      position: relative;
+      border: 1px var(--off-white) solid;
+      border-radius: 20px;
+      width: 17%;
+      padding: 20px 10px;
+  }
+  
+  .process-items span{
+      font-size: 4em;
+      font-weight: 700;
+      position: absolute;
+      right: 30px;
+      top: -50px;
+      color: var(--soft-red);
+      background-color: var(--deep-blue);
+  
+  }
+  
+  @media (max-width: 1280px){
+      #process{
+         height: auto; 
+      }
+  
+      .process-display{
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .process-items{
+          width: 50%;
+          margin: 40px 0;
+      }
+  }
+  
+  @media (max-width: 600px){
+      #process{
+          margin: 50px 0;
+      }
+  
+      .process-items{
+          width: 100%;
+          margin: 80px 0;
+      }
+  }
