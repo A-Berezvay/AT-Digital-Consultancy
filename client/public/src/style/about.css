@@ -95,7 +95,6 @@
 
 @media (max-width: 700px){
     .commitments-display{
-        align-items: flex-start;
         flex-wrap: nowrap;
         flex-direction: column;
     }

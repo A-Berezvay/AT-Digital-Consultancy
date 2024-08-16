@@ -15,7 +15,6 @@ main{
     margin: 0 auto;
     padding: 20px;
     background-color: var(--slate-gray);
-    box-shadow: 0 0 10px var(--sand);
     border-radius: 5px;
 }
 

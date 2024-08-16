@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style/contact.css?v=2805"> <!--CSS Stylesheet (Local)-->
-    <link rel="stylesheet" href="./src/style/global.css?v=1008:1320"> <!--CSS Stylesheet (Global)-->
+    <!--NO CACHING META LINKS-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!--STYLESHEETS, FONTS, ICONS-->
+    <link rel="stylesheet" href="./src/style/contact.css?v=1608"> <!--CSS Stylesheet (Local)-->
+    <link rel="stylesheet" href="./src/style/global.css?v=1608"> <!--CSS Stylesheet (Global)-->
     <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
@@ -69,7 +74,7 @@
                                 </ul>
                             </section>
                             <section>
-                                <a href="tech-consultation.html" class="service-categories">Software Solutions</a>
+                                <a href="tech-consultation.html" class="service-categories">Software Recommendations</a>
                                 <ul class="service-items">
                                     <a href="enterprise-web-hosting.html"><li>Web Hosting</li></a>
                                     <a href="enterprise-resource-planning.html"><li>Enterprise Resource Planning</li></a>
@@ -94,31 +99,22 @@
             <form action="https://formspree.io/f/mkgwbnaa" method="POST" enctype="multipart/form-data" name="contact-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Joe Doe" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="joedoe@email.com" required>
                 </div>
                 <div class="form-group">
                     <label for="company">Company Name:</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" placeholder="The Juice Inc.">
                 </div>
                 <div class="form-group">
                     <label for="service">Service of Interest:</label>
                     <select id="service" name="service" required>
                         <option value="" disabled selected>Select a service</option>
-                        <option value="erp">Enterprise Resource Planning (ERP)</option>
-                        <option value="web-hosting">Enterprise Web Hosting</option>
-                        <option value="ordering-system">Online Ordering System</option>
-                        <option value="pos">Point of Sale (POS)</option>
-                        <option value="pms">Property Management System (PMS)</option>
-                        <option value="software-testing">Software Testing</option>
-                        <option value="ui-ux">UI/UX Design</option>
-                        <option value="static-websites">Static Websites</option>
-                        <option value="dynamic-websites">Dynamic Websites</option>
-                        <option value="cms-websites">CMS-based Websites</option>
-                        <option value="custom-cms">Custom CMS Solutions</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="marketing">Marketing</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -131,12 +127,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="file">Attach a file:</label>
-                    <input type="file" id="file" name="file">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Describe your idea to help us assign the relevant consutation expert." required></textarea>
                 </div>
                 <button type="submit">Send Message</button>
             </form>

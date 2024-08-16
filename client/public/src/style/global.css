@@ -80,7 +80,13 @@ a:hover{
 
 .main-sections{
     height: auto;
-    padding: 50px;
+    padding: 100px 50px;
+}
+
+@media (max-width:1200px){
+  .main-sections{
+    padding: 100px 10px;
+  }
 }
 
 
@@ -88,17 +94,35 @@ a:hover{
 /* ===TYPOGRAPHY=== */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Oswald", sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--sand);
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--sand);
 }
 
-p, a {
+p, a, q {
     font-family: "Quattrocento", serif;
     line-height: 25px;
     color: var(--off-white);
 }
+
+b {
+  font-family: "Quattrocento", serif;
+  line-height: 25px;
+  font-weight: 900;
+  color: var(--soft-red);
+}
+
+@media (max-width:1200px){
+  h2{
+      font-size: 2.5em;
+      text-align: center;
+  }
+  
+  h3{
+      font-size: 1.75em;
+  }
+} 
 
 /* ===HEADER DESIGN=== */
 
@@ -387,7 +411,10 @@ header nav{
     background-color: var(--deep-blue);
     color: var(--off-white);
     height: auto;
-    padding: 40px 0;
+}
+
+#cta p{
+  margin: 20px 0;
 }
 
 /* === CTA 2.0 === */
@@ -440,7 +467,7 @@ footer{
 
 .footer-nav-links{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     color: var(--off-white);
 }
 
