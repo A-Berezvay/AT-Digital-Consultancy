@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const servicesMinusIcon = document.getElementById('services-minus-icon');
     const aboutPlusIcon = document.getElementById('about-plus-icon');
     const digitalTransformationPlusIcon = document.getElementById('digital-transformation-plus-icon');
+    const softwareRecommendationsPlusIcon = document.getElementById('software-recommendation-plus-icon');
 
     servicesMinusIcon.style.display = 'none';
 
@@ -81,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesPlusIcon.style.display = 'none';
             aboutPlusIcon.style.display = 'none';
             digitalTransformationPlusIcon.style.display = 'none';
+            softwareRecommendationsPlusIcon.style.display = 'none';
 
             serviceBtn.addEventListener('mouseenter', showDropdown);
             serviceBtn.addEventListener('mouseleave', hideDropdown);

@@ -42,36 +42,46 @@
 
 #seo{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     width: 100%;
+}
+
+#seo h2{
+    margin: 40px 0;
 }
 
 #seo article{
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
 }
 
-#seo article, div{
-    width: 50%;
-    padding: 0 30px;
+#seo article{
+    width: 100%;
+}
+
+#seo article p{
+    padding: 0 40px;
 }
 
 .seo-network{
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
 }
 
 
 
 @media (max-width: 700px){
-    #seo{
+    #seo article{
         flex-direction: column;
         align-items: center;
     }
 
-    #seo article, div{
+    .seo-network{
+        margin: 40px 0;
         width: 100%;
+        padding: 0 20px;
     }
 }
 /* === ADVANTAGES === */
