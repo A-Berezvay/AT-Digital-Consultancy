@@ -55,3 +55,93 @@
         height: auto;
     }
 }
+
+/* === PROGRAMMING LANGUAGES === */
+
+.programming{
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.programming-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-html5{
+    background: linear-gradient(45deg, #e44d26, #f16529);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-css3-alt{
+    background: linear-gradient(45deg, #264de4, #2965f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-js {
+    background: linear-gradient(45deg, #f7df1e, #e4a017);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-react {
+    background: linear-gradient(45deg, #61dafb, #21a1f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-angular {
+    background: linear-gradient(45deg, #dd1b16, #c3002f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-python {
+    background: linear-gradient(45deg, #306998, #ffe873);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-java {
+    background: linear-gradient(45deg, #5382a1, #2a6474);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-database {
+    background: linear-gradient(45deg, #f29111, #d49424);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+@media (max-width:1000px){
+    .programming{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .programming-display{
+        margin: 30px 0;
+    }
+}

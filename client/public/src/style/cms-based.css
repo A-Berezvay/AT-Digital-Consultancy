@@ -55,3 +55,68 @@
         height: auto;
     }
 }
+
+/* === PROGRAMMING LANGUAGES === */
+
+#cms-section{
+    background: linear-gradient(to bottom, 
+    var(--deep-blue) 0%, 
+    var(--slate-gray) 50%, 
+    var(--deep-blue) 100%);
+}
+
+.programming{
+    margin: 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.programming-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-shopify{
+    background: linear-gradient(45deg, #96bf48, #5e8e3e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-wix{
+    background: linear-gradient(45deg, #ffda44, #fdb813);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-squarespace {
+    background: linear-gradient(45deg, #222222, #333333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+.fa-wordpress{
+    background: linear-gradient(45deg, #21759b, #2c9cc0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
+@media (max-width:1000px){
+    .programming{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .programming-display{
+        margin: 30px 0;
+    }
+}
