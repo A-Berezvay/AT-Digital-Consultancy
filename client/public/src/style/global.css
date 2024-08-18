@@ -49,18 +49,35 @@ body{
 /* ===BASIC STYLE=== */
 
 button {
-    padding: 5px 10px;
-    font-weight: 600;
-    border-radius: 10px;
-    color: var(--deep-blue);
-    background-color: var(--off-white);
-    cursor: pointer;
-    transition: 0.5s ease;
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  border: 2px solid var(--soft-red);
+  padding: 10px 20px;
+  font-size: .5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover{
-    background-color: var(--sand);
-    color: var(--deep-blue);
+  background-color: var(--off-white);
+  color: var(--soft-red);
+  border-color: var(--soft-red);
+}
+
+button:active{
+  background-color: var(--slate-gray);
+  color: var(--off-white);
+  border-color: var(--slate-gray);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:focus{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(191, 140, 128, 0.5);
 }
 
 a{
@@ -133,7 +150,7 @@ header{
   align-items: center;
   width: 100%;
   padding: 0 30px;
-  height: 50px;
+  height: 80px;
   background-color: var(--deep-blue);
   z-index: 100;
 }
@@ -379,6 +396,11 @@ header nav{
 }
 
 @media (max-width: 800px){
+
+  .package-display{
+    width: 100%;
+  }
+
   .package-display div{
     display: flex;
     flex-direction: column;
@@ -391,9 +413,6 @@ header nav{
 }
 
 @media (max-width: 450px){
-  .package-display{
-    width: 90%;
-  }
 
   .package-display p{
     font-size: 1rem;

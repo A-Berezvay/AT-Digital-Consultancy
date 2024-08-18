@@ -109,7 +109,7 @@
       padding: 20px 10px;
   }
   
-  .process-items span{
+  .process-items span, i{
       font-size: 4em;
       font-weight: 700;
       position: absolute;

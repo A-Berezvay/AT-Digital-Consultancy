@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style/static.css?v=2705"> <!--CSS Stylesheet (Local)-->
-    <link rel="stylesheet" href="./src/style/global.css?v=1708"> <!--CSS Stylesheet (Global)-->
+    <!--NO CACHING META LINKS-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!--STYLESHEETS, FONTS, ICONS-->
+    <link rel="stylesheet" href="./src/style/static.css?v=1808"> <!--CSS Stylesheet (Local)-->
+    <link rel="stylesheet" href="./src/style/global.css?v=1808"> <!--CSS Stylesheet (Global)-->
     <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
@@ -79,7 +84,7 @@
         </section>
         <section class="main-sections" id="benefits">
             <h2>Why Choose a Static Website?</h2>
-            <ul>
+            <ul class="hidden-left">
                 <li><strong>Speed:</strong> Lightning-fast loading times thanks to minimal server-side processing.</li>
                 <li><strong>Security:</strong> Less vulnerability to security risks as there are no databases or complex CMS interfaces.</li>
                 <li><strong>Reliability:</strong> Fewer moving parts mean there’s less that can go wrong.</li>
@@ -90,26 +95,44 @@
             <h2>Our Static Website Services</h2>
             <p>From initial design to final launch, our team provides a comprehensive range of services to create a stunning and effective static website for your business.</p>
             <div class="service-list">
-                <div class="service">
+                <div class="service hidden-bottom">
                     <h3>Custom Design</h3>
                     <p>Unique designs that reflect your brand and engage your audience.</p>
                 </div>
-                <div class="service">
+                <div class="service hidden-bottom">
                     <h3>SEO Optimisation</h3>
                     <p>Optimised content and metadata to ensure your site ranks well in search engine results.</p>
                 </div>
-                <div class="service">
+                <div class="service hidden-bottom">
                     <h3>Hosting Solutions</h3>
                     <p>Reliable and affordable hosting packages that ensure your site is always online.</p>
                 </div>
-                <div class="service">
+                <div class="service hidden-bottom">
                     <h3>Maintenance</h3>
                     <p>Regular updates and backups to keep your site running smoothly.</p>
                 </div>
             </div>
         </section>
-        <section class="packages">
-            <div class="package-display">
+        <section class="main-sections">
+            <h2>Programming languages used</h2>
+            <div class="programming">
+                <div class="programming-display">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>Html</h3>
+                </div>
+                <div class="programming-display">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h3>Css</h3>
+                </div>
+                <div class="programming-display">
+                    <i class="fa-brands fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+
+            </div>
+        </section>
+        <section class="packages main-sections">
+            <div class="package-display hidden-left">
                 <div>
                     <h2>Basic</h2>
                     <p>£590</p>
@@ -123,7 +146,7 @@
                     <li>Contact Form Integration</li>
                 </ul>
             </div>
-            <div class="package-display">
+            <div class="package-display hidden-left">
                 <div>
                     <h2>Standard</h2>
                     <p>£1190</p>
@@ -139,7 +162,7 @@
                     <li>Social Media Integration</li>
                 </ul>
             </div>
-            <div class="package-display">
+            <div class="package-display hidden-left">
                 <div>
                     <h2>Premium</h2>
                     <p>£2390</p>
