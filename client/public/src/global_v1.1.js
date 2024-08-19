@@ -38,12 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     serviceBtn.addEventListener('mouseenter', showDropdown);
-
     dropdownMenu.addEventListener('mouseenter', showDropdown);
 
     serviceBtn.addEventListener('mouseleave', hideDropdown);
     dropdownMenu.addEventListener('mouseleave', hideDropdown);
-
+    
     //RESPONSIVE NAVIGATION
 
     const servicesPlusIcon = document.getElementById('services-plus-icon');
