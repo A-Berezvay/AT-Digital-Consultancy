@@ -179,12 +179,12 @@ header nav{
 }
 
 .services-dropdown {
+  display: none;
   position:absolute;
   top: 70px;
   width: 50%;
   background-color: var(--deep-blue);
   border-radius: 0 0 10px 10px;
-  border: 1px solid var(--off-white);
   padding: 30px 0;
 }
 
