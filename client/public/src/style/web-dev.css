@@ -53,6 +53,7 @@ th {
     border-radius: 5px;
     height: 40vh;
     margin: 50px 0;
+    padding: 0 30px;
     overflow: hidden;
     color: white;
 }
@@ -93,7 +94,7 @@ th {
 
     .guided-services{
         width: 100%;
-        padding: 0 30px;
+
     }
 
     .guided-services p{
