@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             serviceBtn.onclick = null;
             servicesPlusIcon.style.display = 'none';
             aboutPlusIcon.style.display = 'none';
+            servicesDropdown.style.display = 'none';
             digitalTransformationPlusIcon.style.display = 'none';
             softwareRecommendationsPlusIcon.style.display = 'none';
 
