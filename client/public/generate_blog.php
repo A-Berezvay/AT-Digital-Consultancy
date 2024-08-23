@@ -1,33 +1,74 @@
+<?php
+include 'parsedown/Parsedown.php';
+
+// Directories
+$mdDir = __DIR__ . '/blog_md/';
+$htmlDir = __DIR__ . '/blog_html/';
+
+// Initialize Parsedown
+$Parsedown = new Parsedown();
+
+// Scan the markdown directory for files
+$mdFiles = scandir($mdDir);
+$posts = [];
+
+foreach ($mdFiles as $mdFile) {
+    if (pathinfo($mdFile, PATHINFO_EXTENSION) == 'md') {
+        // Read the Markdown file
+        $markdownContent = file_get_contents($mdDir . $mdFile);
+
+        // Convert Markdown to HTML
+        $htmlContent = $Parsedown->text($markdownContent);
+
+        // Create an HTML file
+        $slug = pathinfo($mdFile, PATHINFO_FILENAME);
+        $htmlFilename = $slug . '.html';
+        $htmlFile = fopen($htmlDir . '/' . $htmlFilename, 'w');
+
+        // Basic HTML structure with content
+        $htmlStructure = '
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="../src/style/posts.css">
+            <title>' . ucfirst($slug) . '</title>
+        </head>
+        <body>
+            <main>
+                <article class="blog-post">' . $htmlContent . '</article>
+            </main>
+            <footer>
+                <p>&copy; 2024 AT Digital Consultancy. All rights reserved.</p>
+            </footer>
+        </body>
+        </html>';
+
+        // Write the HTML content to the file
+        fwrite($htmlFile, $htmlStructure);
+        fclose($htmlFile);
+
+        // Add the post to the posts array for updating the blog.html file
+        $posts[] = '<li><a href="blog_html/' . $htmlFilename . '">' . ucfirst($slug) . '</a></li>';
+    }
+}
+
+// Update blog.html with the new posts
+$blogHTML = '
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--DESCRIPTION-->
-    <meta name="description" content="AT Digital Consultancy empowers businesses with digital transformation, software development, marketing and comprehensive tech services, from individuals to enterprises.">
-    <!--NO CACHING META LINKS-->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <!--STYLESHEETS, FONTS, ICONS-->
-    <link rel="stylesheet" href="./src/style/index.css?v=11608"> <!--CSS Stylesheet (Local)-->
-    <link rel="stylesheet" href="./src/style/global.css?v=2308"> <!--CSS Stylesheet (Global)-->
+    <link rel="stylesheet" href="./src/style/blog.css">
+    <link rel="stylesheet" href="./src/style/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet"> <!--Google Fonts-->
-    <!--FAVICON-->
-    <link rel="icon" href="./src/assets/Images/favicon_io 2/favicon.ico" type="image/x-icon">
-    <title>AT Digital Consultancy | Software Development & Digital Transformation Agency</title>
+    <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
+    <title>Blog AT Digital Consultancy | Software Development & Digital Transformation Agency</title>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4JR6SPQNSL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4JR6SPQNSL');
-</script>
 <body>
     <header>
         <nav>
@@ -77,48 +118,12 @@
         </nav>
     </header>
     <main>
-        <section id="hero">
-            <img src="./src/assets/Images/hero-img.jpg" alt="">
-            <h1>Empowering Your Business with Digital Solutions</h1>
-            <p>Transform your operations and boost efficiency with our comprehensive tech services.</p>
-            <a href="services.html"><button>Our Services</button></a>
-        </section>
-        <section class="main-sections" id="services">
-            <a href="digital-transformation.html">
-                <article class="services-section hidden-bottom">
-                    <i class="fa-solid fa-diagram-project"></i>
-                    <h2>Digital Transformation</h2>
-                    <p>Streamline operations and enhance customer experiences with our digital transformation services. We integrate advanced technologies like AI, CRM, and ERP to future-proof your business.</p>
-                    <img src="./src/assets/Images/digital_transformation.jpg" alt="">
-                </article>
-            </a>
-            <a href="web-dev.html">
-                <article class="services-section hidden-bottom">
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>Build a robust online presence with our web development services. We create visually appealing, functional, secure, and SEO-optimized websites.</p>
-                    <img src="./src/assets/Images/web_dev.jpg" alt="">
-                </article>
-            </a>
-            <a href="tech-consultation.html">
-            <article class="services-section hidden-bottom">
-                <i class="fa-solid fa-chart-simple"></i>
-                <h2>Software Recommendations</h2>
-                <p>We offer enterprise resource management, online ordering systems, and advanced point of sale software. Enhance productivity and efficiency with our tailored, reliable solutions.</p>
-                <img src="./src/assets/Images/consultation-image.jpg" alt="">
-            </article>
-            </a>
-        </section>
-        <section class="main-sections hidden" id="introduction">
-            <h2>Who we are</h2>
-            <div class="hidden-left">
-                <p>Founded on the principle of making high-tech solutions accessible, We at AT Digital Consultancy are dedicated to helping businesses thrive in the digital era. Our team of experts brings together years of experience in technology and innovation to deliver results that matter.</p>
-                <p><b>Mission Statement:</b>Our mission is to empower businesses by implementing efficient digital strategies that drive growth and enhance operational efficiency.</p>
-            </div>
-        </section>
-        <section class="main-sections" id="cta">
-            <p>Ready to elevate your online presence? Let's turn your vision into reality. Get in touch today and start your journey to success.</p>
-            <a href="contact.html"><button>Contact us</button></a>
+        <section class="main-sections">
+            <h2>Blog Posts</h2>
+            <section class="blog-content">
+            <ul>
+                ' . implode("\n", $posts) . '
+            </ul>
         </section>
     </main>
     <footer>
@@ -169,7 +174,11 @@
             <a href="privacy-policy.html">Privacy Policy</a>
         </section>
     </footer>
-    <script src="./src/global_v1.1.js?v=2308" defer></script> <!-- GLOBAL JAVASCRIPT -->
-    <script src="https://kit.fontawesome.com/484a70a94f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
+    <script src="./src/global_v1.1.js"></script>
 </body>
-</html>
+</html>';
+
+file_put_contents(__DIR__ . '/blog.html', $blogHTML);
+
+echo "Blog posts generated successfully!";
+?>

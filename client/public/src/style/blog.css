@@ -1,0 +1,40 @@
+/* Blog Grid Layout */
+.blog-content ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Individual Blog Post */
+.blog-content ul li {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Blog Post Hover Effect */
+.blog-content ul li:hover {
+    transform: scale(1.05);
+}
+
+/* Blog Post Links */
+.blog-content ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-content h2 {
+        font-size: 1.5em;
+    }
+
+    .blog-content ul {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
