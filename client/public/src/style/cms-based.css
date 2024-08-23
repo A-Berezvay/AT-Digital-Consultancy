@@ -94,6 +94,14 @@
     font-size: 5em;
 }
 
+.fa-magento{
+    background: linear-gradient(45deg, #F46D25, #D35400);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    font-size: 5em;
+}
+
 .fa-squarespace {
     background: linear-gradient(45deg, #222222, #333333);
     -webkit-background-clip: text;
@@ -119,4 +127,38 @@
     .programming-display{
         margin: 30px 0;
     }
+}
+
+.faq-item{
+    border-bottom: 1px solid var(--sand);
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 20px 10px;
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Set a max-height that is larger than the expected content */
+    transition: max-height 0.4s ease;
+}
+
+.faq-item.active h3{
+    color: var(--soft-red);
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 20px;
 }
