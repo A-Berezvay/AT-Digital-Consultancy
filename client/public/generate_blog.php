@@ -32,12 +32,13 @@ foreach ($mdFiles as $mdFile) {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="../src/style/posts.css">
+            <link rel="stylesheet" href="../src/style/posts.css?v=2408">
             <title>' . ucfirst($slug) . '</title>
         </head>
         <body>
             <main>
                 <article class="blog-post">' . $htmlContent . '</article>
+                <a href="../blog.html"><button>Back to blog</button></a>
             </main>
             <footer>
                 <p>&copy; 2024 AT Digital Consultancy. All rights reserved.</p>
@@ -118,6 +119,11 @@ $blogHTML = '
         </nav>
     </header>
     <main>
+        <section class="main-sections" id="hero">
+            <img src="./src/assets/Images/business-intelligence.jpg" alt="A person writing on the computer">
+            <h1>Insights & Updates</h1>
+            <p>Stay informed with the latest trends, tips, and insights from the world of digital transformation and web development.</p>
+        </section>
         <section class="main-sections">
             <h2>Blog Posts</h2>
             <section class="blog-content">
