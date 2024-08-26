@@ -30,42 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //RESPONSIVE ICONS
 
-    const servicesPlusIcon = document.getElementById('services-plus-icon');
-    const servicesMinusIcon = document.getElementById('services-minus-icon');
-    const aboutPlusIcon = document.getElementById('about-plus-icon');
-    const digitalTransformationPlusIcon = document.getElementById('digital-transformation-plus-icon');
-    const softwareRecommendationsPlusIcon = document.getElementById('software-recommendation-plus-icon');
-
     const menuIcon = document.getElementById('menu-bars');
     const menuCloseIcon = document.getElementById('menu-close');
     const mainMenu = document.getElementById('mainMenu');
 
-    servicesMinusIcon.style.display = 'none';
 
     function updateEventListeners() {
         const isMobile = window.matchMedia('(max-width: 1280px)').matches;
 
         if (isMobile) {
-            serviceBtn.removeEventListener('mouseenter', showDropdown);
-            serviceBtn.removeEventListener('mouseleave', hideDropdown);
-            dropdownMenu.removeEventListener('mouseenter', showDropdown);
-            dropdownMenu.removeEventListener('mouseleave', hideDropdown);
-
-            dropdownMenu.style.display = 'none';
-
-            //Add click listener for mobile dropdown
-            serviceBtn.addEventListener('click', function() {
-                if (dropdownMenu.style.display === 'none') {
-                    dropdownMenu.style.display = 'block';
-                    servicesPlusIcon.style.display = 'none';
-                    servicesMinusIcon.style.display = 'block';
-                } else {
-                    dropdownMenu.style.display = 'none';
-                    servicesPlusIcon.style.display = 'block';
-                    servicesMinusIcon.style.display = 'none';
-                }
-            });
-
             // Menu icon toggles for mobile
             menuIcon.style.display = 'block';
             menuCloseIcon.style.display = 'none';
@@ -79,38 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
             menuCloseIcon.addEventListener('click', function() {
                 mainMenu.style.display = 'none';
                 menuCloseIcon.style.display = 'none';
-                menuIcon.style.display = 'none'; 
+                menuIcon.style.display = 'block'; 
             });
-
         } else {
-            // Re-enable hover listeners for desktop
-            serviceBtn.addEventListener('mouseenter', showDropdown);
-            serviceBtn.addEventListener('mouseleave', hideDropdown);
-            dropdownMenu.addEventListener('mouseenter', showDropdown);
-            dropdownMenu.addEventListener('mouseleave', hideDropdown);
-
-            // Reset styles and remove click listeners
-            dropdownMenu.style.display = 'none';
-            servicesPlusIcon.style.display = 'none';
-            servicesMinusIcon.style.display = 'none';
-            aboutPlusIcon.style.display = 'none';
-            digitalTransformationPlusIcon.style.display = 'none';
-            softwareRecommendationsPlusIcon.style.display = 'none';
-
-            menuIcon.style.display = 'none';
             menuCloseIcon.style.display = 'none';
+            menuIcon.style.display = 'none';
 
         }
-    }
-
-    // FUNCTION FOR DESKTOP HOVER EFFECT
-
-    function showDropdown() {
-        dropdownMenu.style.display = 'block';
-    }
-
-    function hideDropdown() {
-        dropdownMenu.style.display = 'none';
     }
 
     updateEventListeners();
