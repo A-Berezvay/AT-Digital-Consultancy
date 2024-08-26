@@ -1,0 +1,62 @@
+
+
+/* === WHY ELEMENTOR === */
+
+#why-elementor{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.why-elementor-article li{
+    margin: 30px 0;
+    color: #F2F2F2;
+    list-style-type: none;
+}
+
+#winning-websites{
+    width: 70%;
+    height: auto;
+    border-radius: 10%;
+}
+
+@media (max-width:1280px) {
+    #why-elementor{
+        flex-direction: column;
+    }
+
+    #winning-websites{
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+        margin: 30px 0;
+    }
+}
+
+/* === FEATURES === */
+
+#features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-item{
+    margin: 20px 0;
+}
+
+#elementor-hosting{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    border-radius: 10%;
+}
+
+@media (max-width:1280px){
+    #features{
+        flex-direction: column;
+    }
+
+    #elementor-hosting{
+        padding: 0;
+    }
+}
